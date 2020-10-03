@@ -1,54 +1,44 @@
 package com.github.cesar1287.desafiopicpayandroid
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import kotlinx.android.synthetic.main.activity_main.*
+import java.lang.Exception
 
-class MainActivity : AppCompatActivity() {
-
-    //Main(posição1) -> Main2(posição2)
-
+class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        textViewButton.setOnClickListener {
-            startActivity(Intent(this, MainActivity2::class.java))
-            finish()
-        }
-
-        Log.i("Tela 1", "onCreate")
+        setContentView(R.layout.activity_main2)
+        Log.i("Tela 2", "onCreate")
     }
 
     override fun onStart() {
         super.onStart()
-        Log.i("Tela 1", "onStart")
+        Log.i("Tela 2", "onStart")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.i("Tela 1", "onResume")
+        Log.i("Tela 2", "onResume")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.i("Tela 1", "onPause")
+        Log.i("Tela 2", "onPause")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.i("Tela 1", "onStop")
+        Log.i("Tela 2", "onStop")
     }
 
     override fun onRestart() {
         super.onRestart()
-        Log.i("Tela 1", "onRestart")
+        Log.i("Tela 2", "onRestart")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.i("Tela 1", "onDestroy")
+        Log.i("Tela 2", "onDestroy")
     }
 }
