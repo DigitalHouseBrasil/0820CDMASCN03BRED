@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">DesafioPicPayAndroid</string>
+    <string name="register_credit_card">Cadastrar cartão</string>
+    <string name="credit_card_cvv">CVV</string>
+    <string name="credit_card_expiration">Data de expiração</string>
+    <string name="credit_card_number">Número do cartão</string>
+    <string name="credit_card_name">Nome do titular</string>
+    <string name="credit_card_save">Salvar</string>
 </resources>

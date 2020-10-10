@@ -1,10 +1,9 @@
 package com.github.cesar1287.desafiopicpayandroid
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import kotlinx.android.synthetic.main.activity_main.*
+import androidx.appcompat.app.AppCompatDelegate
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,11 +12,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        textViewButton.setOnClickListener {
-            startActivity(Intent(this, MainActivity2::class.java))
-            finish()
-        }
 
         Log.i("Tela 1", "onCreate")
     }

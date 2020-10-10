@@ -6,15 +6,86 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/textViewButton"
+    <!-- RelativeLayout, LinearLayout e ConstraintLayout -->
+    <!-- CordinatorLayout, FrameLayout -->
+
+    <TextView
+        android:id="@+id/tvCreditCardTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_credit_card"
+        android:textColor="@color/white"
+        android:textSize="@dimen/value_thirty_sp"
+        android:layout_marginTop="@dimen/value_thirty_sp"
+        android:layout_marginStart="@dimen/value_twenty_dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/etCreditCardNumber"/>
+
+    <EditText
+        android:id="@+id/etCreditCardNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Botão"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:hint="@string/credit_card_number"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="39dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvCreditCardTitle"
+        app:layout_constraintBottom_toTopOf="@+id/etCreditCardName"/>
+
+    <EditText
+        android:id="@+id/etCreditCardName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/credit_card_name"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="39dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCreditCardNumber"
+        app:layout_constraintBottom_toTopOf="@+id/etCreditCardExpiration"/>
+
+    <EditText
+        android:id="@+id/etCreditCardExpiration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/credit_card_expiration"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/etCreditCardCvv"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCreditCardName" />
+
+    <EditText
+        android:id="@+id/etCreditCardCvv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/credit_card_cvv"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etCreditCardExpiration"
+        app:layout_constraintTop_toTopOf="@+id/etCreditCardExpiration" />
+
+    <Button
+        android:id="@+id/btCreditCardSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/value_twelve_dp"
+        android:textSize="@dimen/value_eighteen_sp"
+        android:text="@string/credit_card_save"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:background="@drawable/custom_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
