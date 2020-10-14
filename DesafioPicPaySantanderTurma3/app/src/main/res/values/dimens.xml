@@ -5,4 +5,6 @@
     <dimen name="value_twelve_dp">12dp</dimen>
     <dimen name="value_eighteen_sp">18sp</dimen>
     <dimen name="value_twenty_dp">20dp</dimen>
+    <dimen name="value_thirty_nine_dp">39dp</dimen>
+    <dimen name="value_sixteen_sp">16sp</dimen>
 </resources>

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DesafioPicPayAndroid.iml" filepath="$PROJECT_DIR$/.idea/modules/DesafioPicPayAndroid.iml" group="DesafioPicPayAndroid" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="DesafioPicPayAndroid/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DesafioPicPayAndroid.iml" filepath="$PROJECT_DIR$/.idea/modules/DesafioPicPayAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/DesafioPicPayAndroid.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/DesafioPicPayAndroid.app.iml" />
     </modules>
   </component>
 </project>
