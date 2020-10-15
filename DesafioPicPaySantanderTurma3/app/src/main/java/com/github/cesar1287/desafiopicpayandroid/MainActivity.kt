@@ -2,8 +2,8 @@ package com.github.cesar1287.desafiopicpayandroid
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import androidx.appcompat.app.AppCompatDelegate
+import android.view.View
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,36 +13,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Log.i("Tela 1", "onCreate")
+        initComponents()
     }
 
-    override fun onStart() {
-        super.onStart()
-        Log.i("Tela 1", "onStart")
-    }
+    private fun initComponents() {
+        etCreditCardNumber.addTextChangedListener(MaskWatcher(etCreditCardNumber, getString(R.string.credit_card_mask)))
+        etCreditCardExpiration.addTextChangedListener(MaskWatcher(etCreditCardExpiration, getString(R.string.expiration_mask)))
+        etCreditCardCvv.addTextChangedListener(MaskWatcher(etCreditCardCvv, getString(R.string.cvv_mask)))
 
-    override fun onResume() {
-        super.onResume()
-        Log.i("Tela 1", "onResume")
-    }
+        btCreditCardSave.setOnClickListener {
+            val expirationDate = etCreditCardExpiration.text.toString()
+            val monthYear = expirationDate.split("/")
 
-    override fun onPause() {
-        super.onPause()
-        Log.i("Tela 1", "onPause")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.i("Tela 1", "onStop")
-    }
-
-    override fun onRestart() {
-        super.onRestart()
-        Log.i("Tela 1", "onRestart")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.i("Tela 1", "onDestroy")
+            if (monthYear.first().toInt() > 12) {
+                tilCreditCardExpiration.error = "Data de expiração é inválida"
+            } else {
+                tilCreditCardExpiration.isErrorEnabled = false
+            }
+        }
     }
 }
