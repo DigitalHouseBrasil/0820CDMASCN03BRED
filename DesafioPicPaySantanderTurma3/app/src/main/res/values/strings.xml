@@ -6,4 +6,5 @@
     <string name="credit_card_number">Número do cartão</string>
     <string name="credit_card_name">Nome do titular</string>
     <string name="credit_card_save">Salvar</string>
+    <string name="credit_card_number_helper">Coloque aqui o número do seu cartão</string>
 </resources>

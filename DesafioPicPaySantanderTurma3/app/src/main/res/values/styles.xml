@@ -16,11 +16,20 @@
         <item name="android:textColorHint">@color/white</item>
         <item name="boxStrokeColor">@color/colorAccent</item>
         <item name="hintTextColor">@color/colorAccent</item>
+        <item name="helperTextTextColor">@color/white</item>
     </style>
 
     <style name="EditTextDefault">
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/value_sixteen_sp</item>
+    </style>
+
+    <style name="ButtonDefault">
+        <item name="android:textSize">@dimen/value_eighteen_sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:background">@drawable/custom_button</item>
     </style>
 
 </resources>
