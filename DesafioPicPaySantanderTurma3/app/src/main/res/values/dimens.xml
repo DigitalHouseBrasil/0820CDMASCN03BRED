@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- NÃO FAZ SENTIDO -->
     <dimen name="value_thirty_sp">30sp</dimen>
     <dimen name="value_sixteen_dp">16dp</dimen>
     <dimen name="value_twelve_dp">12dp</dimen>
@@ -7,4 +9,11 @@
     <dimen name="value_twenty_dp">20dp</dimen>
     <dimen name="value_thirty_nine_dp">39dp</dimen>
     <dimen name="value_sixteen_sp">16sp</dimen>
+    <dimen name="value_thirty_six_dp">36dp</dimen>
+
+    <!-- FAZ SENTIDO -->
+    <dimen name="margin_default_button">16dp</dimen>
+    <dimen name="title_size_default">30sp</dimen>
+    <dimen name="default_margin_title_register_card">20dp</dimen>
+    <dimen name="default_margin_image_register_credit_card">31dp</dimen>
 </resources>

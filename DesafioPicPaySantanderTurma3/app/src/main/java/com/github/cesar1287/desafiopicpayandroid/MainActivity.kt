@@ -1,5 +1,7 @@
 package com.github.cesar1287.desafiopicpayandroid
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
@@ -20,15 +22,18 @@ class MainActivity : AppCompatActivity() {
         etCreditCardExpiration.addTextChangedListener(MaskWatcher(etCreditCardExpiration, getString(R.string.expiration_mask)))
         etCreditCardCvv.addTextChangedListener(MaskWatcher(etCreditCardCvv, getString(R.string.cvv_mask)))
 
-        btCreditCardSave.setOnClickListener {
-            val expirationDate = etCreditCardExpiration.text.toString()
-            val monthYear = expirationDate.split("/")
-
-            if (monthYear.first().toInt() > 12) {
-                tilCreditCardExpiration.error = "Data de expiração é inválida"
-            } else {
-                tilCreditCardExpiration.isErrorEnabled = false
-            }
+        etCreditCardNumber.setOnClickListener {
+            val intent = Intent(this, MainActivity2::class.java)
+            startActivity(intent)
         }
+
+        btCreditCardSave.setOnClickListener {
+            startMain2(this@MainActivity)
+        }
+    }
+
+    fun startMain2(context: Context) {
+        val intent = Intent(context, MainActivity2::class.java)
+        startActivity(intent)
     }
 }
