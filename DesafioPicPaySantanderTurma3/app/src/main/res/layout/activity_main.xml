@@ -126,14 +126,16 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btCreditCardSave"
+            style="@style/ButtonDefault"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/value_twelve_dp"
             android:text="@string/credit_card_save"
-            style="@style/ButtonDefault"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilCreditCardExpiration" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
