@@ -34,8 +34,8 @@
     </style>
 
     <style name="BackButtonDefault">
-        <item name="android:layout_width">@dimen/value_thirty_six_dp</item>
-        <item name="android:layout_height">@dimen/value_thirty_six_dp</item>
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
         <item name="android:layout_marginTop">@dimen/value_sixteen_dp</item>
         <item name="android:layout_marginStart">@dimen/value_sixteen_dp</item>
         <item name="srcCompat">@drawable/ic_keyboard_arrow_left_24px</item>
