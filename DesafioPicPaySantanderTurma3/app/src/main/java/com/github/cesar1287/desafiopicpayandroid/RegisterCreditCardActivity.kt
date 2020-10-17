@@ -30,6 +30,10 @@ class RegisterCreditCardActivity : AppCompatActivity() {
             intent.putExtra("bundle", bundle)
             startActivity(intent)
         }
+
+        ibRegisterCreditCardBack.setOnClickListener {
+            finish()
+        }
     }
 
     companion object {

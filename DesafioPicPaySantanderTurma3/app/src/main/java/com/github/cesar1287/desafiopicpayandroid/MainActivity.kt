@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
 import android.util.Log
 import com.github.cesar1287.desafiopicpayandroid.RegisterCreditCardActivity.Companion.KEY_CREDIT_CARD_NUMBER
 import com.github.cesar1287.desafiopicpayandroid.RegisterCreditCardActivity.Companion.KEY_TEACHER
@@ -29,8 +30,7 @@ class MainActivity : AppCompatActivity() {
         professor?.sobrenome
         professor?.matricula
 
-        Log.i("Numero do cartão", numberCreditCard ?: "")
-        Log.i("double", double.toString())
+        etCreditCardNumber.text = Editable.Factory.getInstance().newEditable(numberCreditCard)
 
         initComponents()
     }
@@ -47,6 +47,10 @@ class MainActivity : AppCompatActivity() {
 
         btCreditCardSave.setOnClickListener {
             startMain2(this@MainActivity)
+        }
+
+        ibCreditcardBack.setOnClickListener {
+            finish()
         }
     }
 
