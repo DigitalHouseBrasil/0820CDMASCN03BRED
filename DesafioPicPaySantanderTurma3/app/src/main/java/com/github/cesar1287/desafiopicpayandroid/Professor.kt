@@ -1,7 +1,11 @@
 package com.github.cesar1287.desafiopicpayandroid
 
-import java.time.LocalDateTime
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 
-class Professor(
-    var tempoDeCasa: LocalDateTime = LocalDateTime.now()
-)
+@Parcelize
+data class Professor(
+    var nome: String,
+    var sobrenome: String,
+    var matricula: String
+) : Parcelable
