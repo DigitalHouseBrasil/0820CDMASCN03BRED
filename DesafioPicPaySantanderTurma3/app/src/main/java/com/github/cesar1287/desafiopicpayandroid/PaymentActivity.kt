@@ -3,6 +3,7 @@ package com.github.cesar1287.desafiopicpayandroid
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import kotlinx.android.synthetic.main.activity_payment.*
 
 class PaymentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -10,9 +11,11 @@ class PaymentActivity : AppCompatActivity() {
         setContentView(R.layout.activity_payment)
 
         Log.i("teste - ACTIVITY", "onCreate")
-        val ft = supportFragmentManager.beginTransaction()
-        ft.replace(R.id.container, PaymentFragment())
-        ft.commit()
+
+        btBottomSheet.setOnClickListener {
+            val bottomSheet = PaymentFragment()
+            bottomSheet.show(supportFragmentManager, bottomSheet.tag)
+        }
     }
 
     override fun onStart() {

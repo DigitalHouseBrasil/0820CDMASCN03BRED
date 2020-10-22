@@ -2,14 +2,16 @@ package com.github.cesar1287.desafiopicpayandroid
 
 import android.content.Context
 import android.os.Bundle
+import android.os.TokenWatcher
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.fragment_payment.*
 
-class PaymentFragment : Fragment() {
+class PaymentFragment : BottomSheetDialogFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +32,10 @@ class PaymentFragment : Fragment() {
 
         Log.i("teste - Fragment", "onViewCreated")
         turma3.text = "Aula 23"
+        dismiss.setOnClickListener {
+            Toast.makeText(requireContext(), "Cliquei no botão", Toast.LENGTH_SHORT).show()
+            dismiss()
+        }
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
