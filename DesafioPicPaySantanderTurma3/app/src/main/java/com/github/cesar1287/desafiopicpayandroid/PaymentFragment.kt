@@ -19,6 +19,10 @@ class PaymentFragment : BottomSheetDialogFragment() {
         Log.i("teste - Fragment", "onCreate")
     }
 
+    //activity - activity - intent.putExtra
+    //activity - fragment - arguments(Bundle)
+    //fragment - fragment - arguments(Bundle)
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,6 +33,13 @@ class PaymentFragment : BottomSheetDialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val bundle = arguments
+        Log.i("bundle", bundle?.getString("testeString") ?: "")
+        Log.i("bundle", bundle?.getDouble("testeDouble").toString())
+        Log.i("bundle", bundle?.getFloat("testeFloat").toString())
+        Log.i("bundle", bundle?.getInt("testeInt").toString())
+        Log.i("bundle", bundle?.getParcelable<Professor>("professor").toString())
 
         Log.i("teste - Fragment", "onViewCreated")
         turma3.text = "Aula 23"

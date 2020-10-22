@@ -3,6 +3,7 @@ package com.github.cesar1287.desafiopicpayandroid
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_payment.*
 
 class PaymentActivity : AppCompatActivity() {
@@ -12,8 +13,18 @@ class PaymentActivity : AppCompatActivity() {
 
         Log.i("teste - ACTIVITY", "onCreate")
 
+        Toast.makeText(this, "Cliquei no botão", Toast.LENGTH_SHORT).show()
+
         btBottomSheet.setOnClickListener {
             val bottomSheet = PaymentFragment()
+            val bundle = Bundle()
+            val professor = Professor(nome = "Edu", sobrenome = "Misina", matricula = "12345")
+            bundle.putString("testeString", "xpto")
+            bundle.putDouble("testeDouble", 1.0)
+            bundle.putFloat("testeFloat", 1.0f)
+            bundle.putInt("testeInt", 1)
+            bundle.putParcelable("professor", professor)
+            bottomSheet.arguments = bundle
             bottomSheet.show(supportFragmentManager, bottomSheet.tag)
         }
     }
