@@ -10,30 +10,31 @@
     tools:context=".PaymentFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/turma3"
+    <Button
+        android:id="@+id/btRed"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textColor="@color/black"
         android:padding="50dp"
         android:gravity="center"
-        android:text="@string/hello_blank_fragment" />
+        android:text="Botão vermelho" />
 
-    <TextView
-        android:id="@+id/turma5"
+    <Button
+        android:id="@+id/btGreen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textColor="@color/black"
         android:padding="50dp"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@+id/turma3"
-        android:text="@string/hello_blank_fragment" />
+        app:layout_constraintTop_toBottomOf="@+id/btRed"
+        android:text="Botão verde" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/dismiss"
-        app:layout_constraintTop_toBottomOf="@+id/turma5"
+    <Button
+        android:id="@+id/btBlue"
+        app:layout_constraintTop_toBottomOf="@+id/btGreen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Botão azul"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 

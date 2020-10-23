@@ -1,15 +1,40 @@
 package com.github.cesar1287.desafiopicpayandroid
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import kotlinx.android.synthetic.main.activity_payment.*
 
 class PaymentActivity : AppCompatActivity() {
+
+    private lateinit var viewModel: PaymentViewModel
+
+    //PaymentViewModel
+
+    //paymentActivity
+
+    //paymentFragment1
+
+    //paymentFragment2
+
+    //paymentFragment3
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_payment)
+
+        viewModel = ViewModelProvider(this).get(PaymentViewModel::class.java)
+
+        viewModel.onTextChange.observe(this, { color ->
+            color?.let {
+                tvTest.setTextColor(Color.parseColor(color))
+            }
+        })
 
         Log.i("teste - ACTIVITY", "onCreate")
 

@@ -1,6 +1,7 @@
 package com.github.cesar1287.desafiopicpayandroid
 
 import android.content.Context
+import android.graphics.Color
 import android.os.Bundle
 import android.os.TokenWatcher
 import android.util.Log
@@ -8,10 +9,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.fragment_payment.*
 
 class PaymentFragment : BottomSheetDialogFragment() {
+
+    private lateinit var viewModel: PaymentViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,18 +38,20 @@ class PaymentFragment : BottomSheetDialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val bundle = arguments
-        Log.i("bundle", bundle?.getString("testeString") ?: "")
-        Log.i("bundle", bundle?.getDouble("testeDouble").toString())
-        Log.i("bundle", bundle?.getFloat("testeFloat").toString())
-        Log.i("bundle", bundle?.getInt("testeInt").toString())
-        Log.i("bundle", bundle?.getParcelable<Professor>("professor").toString())
+        activity?.let {
+            viewModel = ViewModelProvider(it).get(PaymentViewModel::class.java)
+        }
 
-        Log.i("teste - Fragment", "onViewCreated")
-        turma3.text = "Aula 23"
-        dismiss.setOnClickListener {
-            Toast.makeText(requireContext(), "Cliquei no botão", Toast.LENGTH_SHORT).show()
-            dismiss()
+        btBlue.setOnClickListener {
+            viewModel.onTextChange.postValue("#0000FF")
+        }
+
+        btRed.setOnClickListener {
+            viewModel.onTextChange.postValue("#FF0000")
+        }
+
+        btGreen.setOnClickListener {
+            viewModel.onTextChange.postValue("#00FF00")
         }
     }
 
@@ -67,6 +73,20 @@ class PaymentFragment : BottomSheetDialogFragment() {
 
     override fun onResume() {
         super.onResume()
+
+        val bundle = arguments
+        Log.i("bundle", bundle?.getString("testeString") ?: "")
+        Log.i("bundle", bundle?.getDouble("testeDouble").toString())
+        Log.i("bundle", bundle?.getFloat("testeFloat").toString())
+        Log.i("bundle", bundle?.getInt("testeInt").toString())
+        Log.i("bundle", bundle?.getParcelable<Professor>("professor").toString())
+
+//        Log.i("teste - Fragment", "onViewCreated")
+//        turma3.text = "Aula 23"
+//        dismiss.setOnClickListener {
+//            Toast.makeText(requireContext(), "Cliquei no botão", Toast.LENGTH_SHORT).show()
+//            dismiss()
+//        }
 
         Log.i("teste - Fragment", "onResume")
     }

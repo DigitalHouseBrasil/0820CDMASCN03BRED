@@ -2,15 +2,18 @@ package com.github.cesar1287.desafiopicpayandroid
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
-import android.util.Log
+import androidx.lifecycle.ViewModelProvider
 import com.github.cesar1287.desafiopicpayandroid.RegisterCreditCardActivity.Companion.KEY_CREDIT_CARD_NUMBER
 import com.github.cesar1287.desafiopicpayandroid.RegisterCreditCardActivity.Companion.KEY_TEACHER
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var viewModel: PaymentViewModel
 
     //Main(posição1) -> Main2(posição2)
 
@@ -30,9 +33,21 @@ class MainActivity : AppCompatActivity() {
         professor?.sobrenome
         professor?.matricula
 
-        etCreditCardNumber.text = Editable.Factory.getInstance().newEditable(numberCreditCard)
+        //etCreditCardNumber.text = Editable.Factory.getInstance().newEditable(numberCreditCard)
 
         initComponents()
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        viewModel = ViewModelProvider(this).get(PaymentViewModel::class.java)
+
+        viewModel.onTextChange.observe(this, { color ->
+            color?.let {
+                tvCreditCardTitle.setTextColor(Color.parseColor(color))
+            }
+        })
     }
 
     private fun initComponents() {
@@ -55,7 +70,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun startMain2(context: Context) {
-        val intent = Intent(context, MainActivity2::class.java)
+        val intent = Intent(context, PaymentActivity::class.java)
         startActivity(intent)
     }
 }
