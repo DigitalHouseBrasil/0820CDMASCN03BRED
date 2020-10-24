@@ -3,13 +3,41 @@ package com.github.cesar1287.desafiopicpayandroid
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import java.lang.Exception
+import androidx.fragment.app.Fragment
+import com.google.android.material.tabs.TabLayout
+import kotlinx.android.synthetic.main.activity_main2.*
 
 class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
         Log.i("Tela 2", "onCreate")
+
+        loadFragment(NaoSocioFragment())
+
+        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                when (tab?.position) {
+                    0 -> {
+                        loadFragment(NaoSocioFragment())
+                    }
+                    1 -> {
+                        loadFragment(SocioFragment())
+                    }
+                }
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab?) { /** não uso */ }
+
+            override fun onTabReselected(tab: TabLayout.Tab?) { /** não uso*/ }
+
+        })
+    }
+
+    private fun loadFragment(fragment: Fragment) {
+        val ft = supportFragmentManager.beginTransaction()
+        ft.replace(R.id.container, fragment)
+        ft.commit()
     }
 
     override fun onStart() {
