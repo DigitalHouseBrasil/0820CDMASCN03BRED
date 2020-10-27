@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ExercicioAndroid1</string>
+    <string name="nao_socio">Não sócio</string>
+    <string name="socio">Sócio</string>
+    <string name="cadastro">Cadastro</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nome_empresa">Nome/Empresa</string>
+    <string name="email">E-mail</string>
+    <string name="telefone">Telefone</string>
+    <string name="senha">Senha</string>
+    <string name="confirmar_senha">Confirmar senha</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="campo_obrigatorio">Campo %1$s está em branco</string>
+</resources>
