@@ -34,7 +34,7 @@ class MainActivity2 : AppCompatActivity() {
         })
     }
 
-    private fun loadFragment(fragment: Fragment) {
+    private fun loadFragment(fragment: Fragment, bundle: Bundle = Bundle()) {
         val ft = supportFragmentManager.beginTransaction()
         ft.replace(R.id.container, fragment)
         ft.commit()

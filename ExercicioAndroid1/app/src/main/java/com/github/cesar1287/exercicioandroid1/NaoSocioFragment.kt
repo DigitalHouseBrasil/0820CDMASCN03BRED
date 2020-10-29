@@ -103,6 +103,7 @@ class NaoSocioFragment : Fragment() {
                         telefone = telefone
                     )
                 )
+                viewModel.goToSocio(true)
             }
         }
     }

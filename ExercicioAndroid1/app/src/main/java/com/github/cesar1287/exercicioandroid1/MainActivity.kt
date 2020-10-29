@@ -3,6 +3,7 @@ package com.github.cesar1287.exercicioandroid1
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.tabs.TabLayout
 
@@ -10,6 +11,9 @@ class MainActivity : AppCompatActivity(), TabLayout.OnTabSelectedListener {
 
     private lateinit var tabLayout: TabLayout
     private lateinit var viewModel: MainViewModel
+
+    private val socioFragment = SocioFragment()
+    private val naoSocioFragment = NaoSocioFragment()
 
     //private var nomeSocio = ""
 
@@ -26,11 +30,17 @@ class MainActivity : AppCompatActivity(), TabLayout.OnTabSelectedListener {
     }
 
     private fun initComponents() {
-        callFragment(NaoSocioFragment())
+        callFragment(naoSocioFragment)
 
         tabLayout = findViewById(R.id.tabLayout)
 
         tabLayout.addOnTabSelectedListener(this)
+
+        viewModel.onDataSaved.observe(this, Observer {
+            if (it == true) {
+                tabLayout.getTabAt(1)?.select()
+            }
+        })
 
 //        viewModel.socioAtualizado.observe(this, {
 //            nomeSocio = it
@@ -51,10 +61,10 @@ class MainActivity : AppCompatActivity(), TabLayout.OnTabSelectedListener {
     override fun onTabSelected(tab: TabLayout.Tab?) {
         when (tab?.position) {
             0 -> {
-                callFragment(NaoSocioFragment())
+                callFragment(naoSocioFragment)
             }
             1 -> {
-                callFragment(SocioFragment())
+                callFragment(socioFragment)
             }
         }
     }
