@@ -8,7 +8,8 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Recy" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
     <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
   </component>
@@ -17,6 +18,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aaf085af-34cf-40c1-bea6-2c75046d568a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/HomeActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/MainAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/User.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/main_list_item.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -25,10 +31,14 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/DesafioPicPayAndroid.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/DesafioPicPayAndroid.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/MainActivity2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/MainActivity2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ExercicioAndroid1/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ExercicioAndroid1/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/ViewExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/ViewExtensions.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +68,9 @@
       <list>
         <option value="valueResourceFile" />
         <option value="resourceFile" />
-        <option value="Kotlin File" />
+        <option value="layoutResourceFile" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -78,17 +89,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android-custom-viewC:/Users/rasec/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
     <property name="android.recentlyUsedThemes" value="Base.Theme.MaterialComponents.Light.DarkActionBar" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ExercicioAndroid1" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="multi-representation-previewC:/Users/rasec/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_selected" value="Custom views" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.-1268084130">
       <recent name="com.github.cesar1287.desafiopicpayandroid" />
     </key>
     <key name="android.template.487202885">
+      <recent name="com.github.cesar1287.desafiopicpayandroid" />
+    </key>
+    <key name="android.template.-1747232818">
       <recent name="com.github.cesar1287.desafiopicpayandroid" />
     </key>
     <key name="android.template.357078259">
@@ -184,10 +200,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="537" y="263" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1603321290491" />
-    <state x="610" y="27" key="#com.intellij.ide.util.MemberChooser" timestamp="1603502129376">
+    <state x="610" y="27" key="#com.intellij.ide.util.MemberChooser" timestamp="1604097485728">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="610" y="27" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1603502129376" />
+    <state x="610" y="27" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604097485728" />
     <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602591476728">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -200,10 +216,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1603492008495" />
-    <state x="540" y="258" width="840" height="542" key="AndroidCreateResourceFileDialog" timestamp="1602890091964">
+    <state x="540" y="258" width="840" height="542" key="AndroidCreateResourceFileDialog" timestamp="1604096338420">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="540" y="258" width="840" height="542" key="AndroidCreateResourceFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602890091964" />
+    <state x="540" y="258" width="840" height="542" key="AndroidCreateResourceFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604096338420" />
     <state x="797" y="251" key="AndroidCreateXmlResourceDialog" timestamp="1602892611999">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -216,26 +232,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="580" y="96" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603932200990" />
-    <state width="1851" height="659" key="GridCell.Tab.0.bottom" timestamp="1603495287803">
+    <state width="1851" height="659" key="GridCell.Tab.0.bottom" timestamp="1604101855990">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1851" height="659" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603495287803" />
-    <state width="1851" height="659" key="GridCell.Tab.0.center" timestamp="1603495287803">
+    <state width="1851" height="659" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604101855990" />
+    <state width="1851" height="659" key="GridCell.Tab.0.center" timestamp="1604101855990">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1851" height="659" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603495287803" />
-    <state width="1851" height="659" key="GridCell.Tab.0.left" timestamp="1603495287803">
+    <state width="1851" height="659" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604101855990" />
+    <state width="1851" height="659" key="GridCell.Tab.0.left" timestamp="1604101855989">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1851" height="659" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603495287803" />
-    <state width="1851" height="659" key="GridCell.Tab.0.right" timestamp="1603495287803">
+    <state width="1851" height="659" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604101855989" />
+    <state width="1851" height="659" key="GridCell.Tab.0.right" timestamp="1604101855990">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1851" height="659" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603495287803" />
-    <state x="220" y="0" key="SettingsEditor" timestamp="1603738417944">
+    <state width="1851" height="659" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604101855990" />
+    <state x="220" y="0" key="SettingsEditor" timestamp="1604096281901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="220" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603738417944" />
+    <state x="220" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604096281901" />
     <state x="686" y="266" key="chooseDestDirectoryDialog" timestamp="1602291455051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -252,9 +268,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="364" y="228" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602887570157" />
-    <state x="453" y="0" width="1177" height="1036" key="search.everywhere.popup" timestamp="1603502062235">
+    <state x="453" y="0" width="1177" height="1036" key="search.everywhere.popup" timestamp="1604099126582">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="453" y="0" width="1177" height="1036" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603502062235" />
+    <state x="453" y="0" width="1177" height="1036" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1604099126582" />
   </component>
 </project>
