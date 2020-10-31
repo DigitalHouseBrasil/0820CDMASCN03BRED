@@ -34,7 +34,7 @@ class MainAdapter(
             //todo carregar imagem
 
             if (user.cash > 0.0) {
-                tvMainItemCash.text = "R$ ${user.cash}"
+                tvMainItemCash.text = context.getString(R.string.main_adapter_cash, user.cash)
                 tvMainItemCash.isVisible = true
             }
 

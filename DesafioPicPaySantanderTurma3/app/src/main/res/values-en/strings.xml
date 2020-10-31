@@ -2,4 +2,19 @@
 <resources>
     <string name="app_name">ChallengePicPayAndroid</string>
     <string name="register_credit_card">Credit Card</string>
+    <string name="credit_card_cvv">CVV</string>
+    <string name="credit_card_expiration">Data de expiração</string>
+    <string name="credit_card_number">Número do cartão</string>
+    <string name="credit_card_name">Nome do titular</string>
+    <string name="credit_card_save">Salvar</string>
+    <string name="credit_card_number_helper">Coloque aqui o número do seu cartão</string>
+    <string name="credit_card_mask">#### #### #### ####</string>
+    <string name="expiration_mask">##/##</string>
+    <string name="cvv_mask">###</string>
+    <string name="register_credit_card_button">Cadastrar cartão</string>
+    <string name="register_credit_card_main_title">Cadastre um cartão de crédito</string>
+    <string name="register_credit_card_subtitle">Para fazer pagamentos para outras pessoas você precisa cadastrar um cartão de crédito pessoal.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="main_adapter_cash">U$ %1$f</string>
 </resources>
