@@ -7,6 +7,7 @@ buildscript {
             'appCompat'             :"1.2.0",
             'constraintLayout'      :"2.0.2",
             'lifecycle'             :"2.2.0",
+            'circleImageView'       :"3.1.0",
             'fragment'              :"1.2.5",
             'gradle'                :"4.0.1",
             'material'              :"1.2.1"

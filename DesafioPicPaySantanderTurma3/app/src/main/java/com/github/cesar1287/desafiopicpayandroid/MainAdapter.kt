@@ -6,11 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.main_list_item.view.*
 
 class MainAdapter(
     private val userList: List<User>,
-    private val mainAdapterListener: MainAdapterListener
+    private val onItemClicked: (Int) -> Unit
 ) : RecyclerView.Adapter<MainAdapter.ViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainAdapter.ViewHolder {
@@ -22,7 +23,7 @@ class MainAdapter(
 
     override fun onBindViewHolder(holder: MainAdapter.ViewHolder, position: Int) {
         Log.i("RecyclerView", "onBindViewHolder - $position")
-        holder.bind(userList[position], mainAdapterListener)
+        holder.bind(userList[position], onItemClicked)
     }
 
     override fun getItemCount(): Int {
@@ -31,8 +32,9 @@ class MainAdapter(
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        fun bind(user: User, mainAdapterListener: MainAdapterListener) = with(itemView) {
-            //todo carregar imagem
+        fun bind(user: User, onItemClicked: (Int) -> Unit) = with(itemView) {
+
+            Glide.with(itemView.context).load(user.userProfileAvatar).into(ivMainItemAvatar)
 
             if (user.cash > 0.0) {
                 tvMainItemCash.text = context.getString(R.string.main_adapter_cash, user.cash)
@@ -43,7 +45,7 @@ class MainAdapter(
             tvMainItemName.text = user.userName
 
             vgMainItemContainer.setOnClickListener {
-                mainAdapterListener.onItemClicked(this@ViewHolder.adapterPosition)
+                onItemClicked(this@ViewHolder.adapterPosition)
             }
         }
     }

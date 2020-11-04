@@ -8,7 +8,7 @@
     android:id="@+id/vgMainItemContainer"
     android:background="?attr/selectableItemBackground">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/ivMainItemAvatar"
         android:layout_width="52dp"
         android:layout_height="52dp"
