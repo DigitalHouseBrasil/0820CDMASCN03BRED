@@ -9,7 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.main_list_item.view.*
 
 class MainAdapter(
-    private val userList: List<User>
+    private val userList: List<User>,
+    private val mainAdapterListener: MainAdapterListener
 ) : RecyclerView.Adapter<MainAdapter.ViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainAdapter.ViewHolder {
@@ -21,7 +22,7 @@ class MainAdapter(
 
     override fun onBindViewHolder(holder: MainAdapter.ViewHolder, position: Int) {
         Log.i("RecyclerView", "onBindViewHolder - $position")
-        holder.bind(userList[position])
+        holder.bind(userList[position], mainAdapterListener)
     }
 
     override fun getItemCount(): Int {
@@ -30,7 +31,7 @@ class MainAdapter(
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        fun bind(user: User) = with(itemView) {
+        fun bind(user: User, mainAdapterListener: MainAdapterListener) = with(itemView) {
             //todo carregar imagem
 
             if (user.cash > 0.0) {
@@ -40,6 +41,10 @@ class MainAdapter(
 
             tvMainItemUser.text = user.userId
             tvMainItemName.text = user.userName
+
+            vgMainItemContainer.setOnClickListener {
+                mainAdapterListener.onItemClicked(this@ViewHolder.adapterPosition)
+            }
         }
     }
 }

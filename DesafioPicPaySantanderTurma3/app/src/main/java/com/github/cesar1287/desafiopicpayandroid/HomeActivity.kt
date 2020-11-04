@@ -2,10 +2,11 @@ package com.github.cesar1287.desafiopicpayandroid
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity(), MainAdapterListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
@@ -33,7 +34,11 @@ class HomeActivity : AppCompatActivity() {
 
         findViewById<RecyclerView>(R.id.rvHomeUserList).apply {
             layoutManager = LinearLayoutManager(this@HomeActivity)
-            adapter = MainAdapter(users)
+            adapter = MainAdapter(users, this@HomeActivity)
         }
+    }
+
+    override fun onItemClicked(position: Int) {
+        Log.i("HomeActivity", "Cliquei na posição ${position + 1}")
     }
 }
