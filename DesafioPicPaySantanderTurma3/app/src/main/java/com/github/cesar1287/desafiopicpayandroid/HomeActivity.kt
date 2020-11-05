@@ -1,5 +1,6 @@
 package com.github.cesar1287.desafiopicpayandroid
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -35,8 +36,14 @@ class HomeActivity : AppCompatActivity() {
         findViewById<RecyclerView>(R.id.rvHomeUserList).apply {
             layoutManager = LinearLayoutManager(this@HomeActivity)
             adapter = MainAdapter(users) { position ->
-                Log.i("HomeActivity", "Cliquei na posição ${position + 1}")
+                val intent = Intent(this@HomeActivity, UserPaymentActivity::class.java)
+                intent.putExtra(KEY_INTENT_USER, users[position])
+                startActivity(intent)
             }
         }
+    }
+
+    companion object {
+        const val KEY_INTENT_USER = "user"
     }
 }
