@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".MainActivity">
+    tools:context=".view.activity.MainActivity">
 
     <!-- RelativeLayout, LinearLayout e ConstraintLayout -->
     <!-- CordinatorLayout, FrameLayout -->
@@ -121,6 +121,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btCreditCardSave"
             style="@style/ButtonDefault"
+            android:enabled="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/credit_card_save"

@@ -17,8 +17,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aaf085af-34cf-40c1-bea6-2c75046d568a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/UserPaymentActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_user_payment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/custom_button_enabled.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/selector_button_default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -30,18 +30,44 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/HomeActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/User.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/view/activity/HomeActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/view/activity/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/MainActivity2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/view/activity/MainActivity2.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/MainAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/view/MainAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/MainAdapterListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/utils/MainAdapterListener.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/MaskWatcher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/utils/MaskWatcher.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/NaoSocioFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/view/NaoSocioFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/PaymentActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/view/activity/PaymentActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/PaymentFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/view/PaymentFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/PaymentViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/viewModel/PaymentViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/Professor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/model/Professor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/RegisterCreditCardActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/view/RegisterCreditCardActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/SocioFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/view/SocioFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/StringExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/extensions/StringExtensions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/model/User.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/UserPaymentActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/view/activity/UserPaymentActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/ViewExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/extensions/ViewExtensions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/custom_button.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/custom_button_disabled.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_payment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_payment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register_credit_card.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register_credit_card.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_user_payment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_user_payment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_nao_socio.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_nao_socio.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_payment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_payment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_socio.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_socio.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_3_API_29]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_4_API_29]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -63,11 +89,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="valueResourceFile" />
-        <option value="resourceFile" />
         <option value="layoutResourceFile" />
         <option value="Kotlin Class" />
         <option value="Kotlin File" />
         <option value="Kotlin Interface" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -91,25 +117,38 @@
     <property name="android.recentlyUsedThemes" value="Base.Theme.MaterialComponents.Light.DarkActionBar" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ExercicioAndroid1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="multi-representation-previewC:/Users/rasec/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_selected" value="Custom views" />
     <property name="multi-representation-previewC:/Users/rasec/.gradle/caches/modules-2/files-2.1/de.hdodenhof/circleimageview/3.1.0/e5635e59d66b172f3e99c6a7044dc9535c95d180/circleimageview-3.1.0-sources.jar!/de/hdodenhof/circleimageview/CircleImageView.java_selected" value="Custom views" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="android.template.-1268084130">
-      <recent name="com.github.cesar1287.desafiopicpayandroid" />
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.github.cesar1287.desafiopicpayandroid.view.activity" />
+      <recent name="com.github.cesar1287.desafiopicpayandroid.utils" />
+      <recent name="com.github.cesar1287.desafiopicpayandroid.model" />
+      <recent name="com.github.cesar1287.desafiopicpayandroid.viewModel" />
+      <recent name="com.github.cesar1287.desafiopicpayandroid.view" />
     </key>
-    <key name="android.template.1463766777">
+    <key name="android.template.357078259">
       <recent name="com.github.cesar1287.desafiopicpayandroid" />
     </key>
     <key name="android.template.487202885">
       <recent name="com.github.cesar1287.desafiopicpayandroid" />
     </key>
+    <key name="android.template.1463766777">
+      <recent name="com.github.cesar1287.desafiopicpayandroid" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rasec\Desktop\0820CDMASCN03BRED\DesafioPicPaySantanderTurma3\app\src\main\java\com\github\cesar1287\desafiopicpayandroid\extensions" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rasec\Desktop\0820CDMASCN03BRED\DesafioPicPaySantanderTurma3\app\src\main\res\drawable" />
+    </key>
     <key name="android.template.-1747232818">
       <recent name="com.github.cesar1287.desafiopicpayandroid" />
     </key>
-    <key name="android.template.357078259">
+    <key name="android.template.-1268084130">
       <recent name="com.github.cesar1287.desafiopicpayandroid" />
     </key>
   </component>
@@ -218,14 +257,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="493" y="83" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603321416583" />
+    <state x="580" y="188" width="828" height="664" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1605140053982">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="580" y="188" width="828" height="664" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605140053982" />
     <state x="92" y="92" width="1736" height="856" key="AVDManager" timestamp="1603492008495">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1603492008495" />
-    <state x="540" y="258" width="840" height="542" key="AndroidCreateResourceFileDialog" timestamp="1604096338420">
+    <state x="540" y="258" width="840" height="542" key="AndroidCreateResourceFileDialog" timestamp="1605136652850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="540" y="258" width="840" height="542" key="AndroidCreateResourceFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604096338420" />
+    <state x="540" y="258" width="840" height="542" key="AndroidCreateResourceFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605136652850" />
     <state x="797" y="251" key="AndroidCreateXmlResourceDialog" timestamp="1602892611999">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -254,10 +297,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1851" height="659" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604533201536" />
-    <state x="220" y="0" key="SettingsEditor" timestamp="1604527885340">
+    <state x="220" y="0" key="SettingsEditor" timestamp="1605132256872">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="220" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604527885340" />
+    <state x="220" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605132256872" />
     <state x="686" y="266" key="chooseDestDirectoryDialog" timestamp="1602291455051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
