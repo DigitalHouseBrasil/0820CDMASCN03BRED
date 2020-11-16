@@ -36,15 +36,9 @@ class MainAdapter(
 
         fun bind(user: User, onItemClicked: (Int) -> Unit) = with(itemView) {
 
-            Glide.with(itemView.context).load(user.userProfileAvatar).into(ivMainItemAvatar)
-
-            if (user.cash > 0.0) {
-                tvMainItemCash.text = context.getString(R.string.main_adapter_cash, user.cash)
-                tvMainItemCash.isVisible = true
-            }
-
-            tvMainItemUser.text = user.userId
-            tvMainItemName.text = user.userName
+            Glide.with(itemView.context).load(user.img).into(ivMainItemAvatar)
+            tvMainItemUser.text = user.username
+            tvMainItemName.text = user.name
 
             vgMainItemContainer.setOnClickListener {
                 onItemClicked(this@ViewHolder.adapterPosition)

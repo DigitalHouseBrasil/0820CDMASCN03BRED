@@ -33,9 +33,9 @@ class HomeActivity : AppCompatActivity() {
             it?.let { users ->
                 recyclerView.apply {
                     layoutManager = LinearLayoutManager(this@HomeActivity)
-                    adapter = MainAdapter(users) { position ->
+                    adapter = MainAdapter(users.usersList) { position ->
                         val intent = Intent(this@HomeActivity, UserPaymentActivity::class.java)
-                        intent.putExtra(KEY_INTENT_USER, users[position])
+                        intent.putExtra(KEY_INTENT_USER, users.usersList[position])
                         startActivity(intent)
                     }
                 }
