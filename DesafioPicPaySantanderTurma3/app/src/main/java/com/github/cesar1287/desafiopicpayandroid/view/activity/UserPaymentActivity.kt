@@ -6,7 +6,6 @@ import com.bumptech.glide.Glide
 import com.github.cesar1287.desafiopicpayandroid.R
 import com.github.cesar1287.desafiopicpayandroid.model.User
 import com.github.cesar1287.desafiopicpayandroid.view.activity.HomeActivity.Companion.KEY_INTENT_USER
-import kotlinx.android.synthetic.main.activity_user_payment.*
 
 class UserPaymentActivity : AppCompatActivity() {
 
@@ -22,7 +21,7 @@ class UserPaymentActivity : AppCompatActivity() {
     }
 
     private fun setupUser() {
-        Glide.with(this).load(user?.img).into(ivUserPaymentAvatar)
-        tvUserPaymentUserId.text = user?.username
+//        Glide.with(this).load(user?.img).into(ivUserPaymentAvatar)
+//        tvUserPaymentUserId.text = user?.username
     }
 }

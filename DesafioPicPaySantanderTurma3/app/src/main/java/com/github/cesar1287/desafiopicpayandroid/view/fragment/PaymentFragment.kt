@@ -9,13 +9,13 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.github.cesar1287.desafiopicpayandroid.viewModel.PaymentViewModel
 import com.github.cesar1287.desafiopicpayandroid.model.Professor
-import com.github.cesar1287.desafiopicpayandroid.R
+import com.github.cesar1287.desafiopicpayandroid.databinding.FragmentPaymentBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import kotlinx.android.synthetic.main.fragment_payment.*
 
 class PaymentFragment : BottomSheetDialogFragment() {
 
     private lateinit var viewModel: PaymentViewModel
+    private var binding: FragmentPaymentBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,8 +31,8 @@ class PaymentFragment : BottomSheetDialogFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.i("teste - Fragment", "onCreateView")
-        return inflater.inflate(R.layout.fragment_payment, container, false)
+        binding = FragmentPaymentBinding.inflate(layoutInflater, container, false)
+        return binding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -42,15 +42,15 @@ class PaymentFragment : BottomSheetDialogFragment() {
             viewModel = ViewModelProvider(it).get(PaymentViewModel::class.java)
         }
 
-        btBlue.setOnClickListener {
+        binding?.btBlue?.setOnClickListener {
             viewModel.onTextChange.postValue("#0000FF")
         }
 
-        btRed.setOnClickListener {
+        binding?.btRed?.setOnClickListener {
             viewModel.onTextChange.postValue("#FF0000")
         }
 
-        btGreen.setOnClickListener {
+        binding?.btGreen?.setOnClickListener {
             viewModel.onTextChange.postValue("#00FF00")
         }
     }
@@ -118,5 +118,6 @@ class PaymentFragment : BottomSheetDialogFragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         Log.i("teste - Fragment", "onDestroyView")
+        binding = null
     }
 }

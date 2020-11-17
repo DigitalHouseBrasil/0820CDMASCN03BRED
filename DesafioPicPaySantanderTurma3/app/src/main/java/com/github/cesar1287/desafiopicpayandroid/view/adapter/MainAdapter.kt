@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.github.cesar1287.desafiopicpayandroid.R
 import com.github.cesar1287.desafiopicpayandroid.model.User
-import kotlinx.android.synthetic.main.main_list_item.view.*
 
 class MainAdapter(
     private val userList: List<User>,
@@ -36,13 +35,13 @@ class MainAdapter(
 
         fun bind(user: User, onItemClicked: (Int) -> Unit) = with(itemView) {
 
-            Glide.with(itemView.context).load(user.img).into(ivMainItemAvatar)
-            tvMainItemUser.text = user.username
-            tvMainItemName.text = user.name
-
-            vgMainItemContainer.setOnClickListener {
-                onItemClicked(this@ViewHolder.adapterPosition)
-            }
+//            Glide.with(itemView.context).load(user.img).into(ivMainItemAvatar)
+//            tvMainItemUser.text = user.username
+//            tvMainItemName.text = user.name
+//
+//            vgMainItemContainer.setOnClickListener {
+//                onItemClicked(this@ViewHolder.adapterPosition)
+//            }
         }
     }
 }

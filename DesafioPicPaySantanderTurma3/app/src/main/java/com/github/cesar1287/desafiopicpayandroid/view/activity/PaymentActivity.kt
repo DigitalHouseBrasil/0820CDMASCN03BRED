@@ -10,7 +10,6 @@ import com.github.cesar1287.desafiopicpayandroid.viewModel.PaymentViewModel
 import com.github.cesar1287.desafiopicpayandroid.model.Professor
 import com.github.cesar1287.desafiopicpayandroid.R
 import com.github.cesar1287.desafiopicpayandroid.view.fragment.PaymentFragment
-import kotlinx.android.synthetic.main.activity_payment.*
 
 class PaymentActivity : AppCompatActivity() {
 
@@ -35,7 +34,7 @@ class PaymentActivity : AppCompatActivity() {
 
         viewModel.onTextChange.observe(this, { color ->
             color?.let {
-                tvTest.setTextColor(Color.parseColor(color))
+                //tvTest.setTextColor(Color.parseColor(color))
             }
         })
 
@@ -43,18 +42,18 @@ class PaymentActivity : AppCompatActivity() {
 
         Toast.makeText(this, "Cliquei no botão", Toast.LENGTH_SHORT).show()
 
-        btBottomSheet.setOnClickListener {
-            val bottomSheet = PaymentFragment()
-            val bundle = Bundle()
-            val professor = Professor(nome = "Edu", sobrenome = "Misina", matricula = "12345")
-            bundle.putString("testeString", "xpto")
-            bundle.putDouble("testeDouble", 1.0)
-            bundle.putFloat("testeFloat", 1.0f)
-            bundle.putInt("testeInt", 1)
-            bundle.putParcelable("professor", professor)
-            bottomSheet.arguments = bundle
-            bottomSheet.show(supportFragmentManager, bottomSheet.tag)
-        }
+//        btBottomSheet.setOnClickListener {
+//            val bottomSheet = PaymentFragment()
+//            val bundle = Bundle()
+//            val professor = Professor(nome = "Edu", sobrenome = "Misina", matricula = "12345")
+//            bundle.putString("testeString", "xpto")
+//            bundle.putDouble("testeDouble", 1.0)
+//            bundle.putFloat("testeFloat", 1.0f)
+//            bundle.putInt("testeInt", 1)
+//            bundle.putParcelable("professor", professor)
+//            bottomSheet.arguments = bundle
+//            bottomSheet.show(supportFragmentManager, bottomSheet.tag)
+//        }
     }
 
     override fun onStart() {

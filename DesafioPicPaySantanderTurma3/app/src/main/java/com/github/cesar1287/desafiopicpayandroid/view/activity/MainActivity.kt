@@ -12,7 +12,6 @@ import com.github.cesar1287.desafiopicpayandroid.utils.MaskWatcher
 import com.github.cesar1287.desafiopicpayandroid.view.activity.RegisterCreditCardActivity.Companion.KEY_CREDIT_CARD_NUMBER
 import com.github.cesar1287.desafiopicpayandroid.view.activity.RegisterCreditCardActivity.Companion.KEY_TEACHER
 import com.github.cesar1287.desafiopicpayandroid.viewModel.PaymentViewModel
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -48,33 +47,33 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.onTextChange.observe(this, { color ->
             color?.let {
-                tvCreditCardTitle.setTextColor(Color.parseColor(color))
+                //tvCreditCardTitle.setTextColor(Color.parseColor(color))
             }
         })
     }
 
     private fun initComponents() {
-        etCreditCardNumber.addTextChangedListener(MaskWatcher(etCreditCardNumber, getString(R.string.credit_card_mask)))
-        etCreditCardExpiration.addTextChangedListener(
-            MaskWatcher(etCreditCardExpiration, getString(
-                R.string.expiration_mask
-            ))
-        )
-        etCreditCardCvv.addTextChangedListener(MaskWatcher(etCreditCardCvv, getString(R.string.cvv_mask)))
+//        etCreditCardNumber.addTextChangedListener(MaskWatcher(etCreditCardNumber, getString(R.string.credit_card_mask)))
+//        etCreditCardExpiration.addTextChangedListener(
+//            MaskWatcher(etCreditCardExpiration, getString(
+//                R.string.expiration_mask
+//            ))
+//        )
+//        etCreditCardCvv.addTextChangedListener(MaskWatcher(etCreditCardCvv, getString(R.string.cvv_mask)))
+//
+//        etCreditCardNumber.setOnClickListener {
+//            btCreditCardSave.isEnabled = true
+////            val intent = Intent(this, MainActivity2::class.java)
+////            startActivity(intent)
+//        }
 
-        etCreditCardNumber.setOnClickListener {
-            btCreditCardSave.isEnabled = true
-//            val intent = Intent(this, MainActivity2::class.java)
-//            startActivity(intent)
-        }
-
-        btCreditCardSave.setOnClickListener {
-            startMain2(this@MainActivity)
-        }
-
-        ibCreditcardBack.setOnClickListener {
-            finish()
-        }
+//        btCreditCardSave.setOnClickListener {
+//            startMain2(this@MainActivity)
+//        }
+//
+//        ibCreditcardBack.setOnClickListener {
+//            finish()
+//        }
     }
 
     fun startMain2(context: Context) {
