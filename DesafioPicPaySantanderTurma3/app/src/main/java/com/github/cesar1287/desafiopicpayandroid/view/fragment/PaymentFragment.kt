@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.github.cesar1287.desafiopicpayandroid.viewModel.PaymentViewModel
-import com.github.cesar1287.desafiopicpayandroid.model.Professor
 import com.github.cesar1287.desafiopicpayandroid.databinding.FragmentPaymentBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 

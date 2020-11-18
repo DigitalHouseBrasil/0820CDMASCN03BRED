@@ -1,8 +1,5 @@
 package com.github.cesar1287.desafiopicpayandroid.model.home
 
-import com.github.cesar1287.desafiopicpayandroid.model.User
-import com.github.cesar1287.desafiopicpayandroid.model.Users
-
 class HomeRepository {
 
     fun getUsers(): Users {

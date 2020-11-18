@@ -1,9 +1,7 @@
 package com.github.cesar1287.desafiopicpayandroid.view.activity
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.github.cesar1287.desafiopicpayandroid.model.Professor
 import com.github.cesar1287.desafiopicpayandroid.R
 
 class RegisterCreditCardActivity : AppCompatActivity() {

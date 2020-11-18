@@ -1,7 +1,5 @@
 package com.github.cesar1287.desafiopicpayandroid.model.home
 
-import com.github.cesar1287.desafiopicpayandroid.model.Users
-
 class HomeBusiness {
 
     private val repository: HomeRepository by lazy {

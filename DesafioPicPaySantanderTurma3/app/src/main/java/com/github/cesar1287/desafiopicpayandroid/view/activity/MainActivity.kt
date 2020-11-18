@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import com.github.cesar1287.desafiopicpayandroid.*
-import com.github.cesar1287.desafiopicpayandroid.model.Professor
 import com.github.cesar1287.desafiopicpayandroid.utils.MaskWatcher
 import com.github.cesar1287.desafiopicpayandroid.view.activity.RegisterCreditCardActivity.Companion.KEY_CREDIT_CARD_NUMBER
 import com.github.cesar1287.desafiopicpayandroid.view.activity.RegisterCreditCardActivity.Companion.KEY_TEACHER

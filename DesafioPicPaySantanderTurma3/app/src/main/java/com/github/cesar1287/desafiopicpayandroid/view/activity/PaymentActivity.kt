@@ -1,15 +1,12 @@
 package com.github.cesar1287.desafiopicpayandroid.view.activity
 
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.github.cesar1287.desafiopicpayandroid.viewModel.PaymentViewModel
-import com.github.cesar1287.desafiopicpayandroid.model.Professor
 import com.github.cesar1287.desafiopicpayandroid.R
-import com.github.cesar1287.desafiopicpayandroid.view.fragment.PaymentFragment
 
 class PaymentActivity : AppCompatActivity() {
 
