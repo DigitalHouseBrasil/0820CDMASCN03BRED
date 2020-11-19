@@ -23,16 +23,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val numberCreditCard = intent.getStringExtra(KEY_CREDIT_CARD_NUMBER)
-        val professor = intent.getParcelableExtra<Professor>(KEY_TEACHER)
+        //val professor = intent.getParcelableExtra<Professor>(KEY_TEACHER)
         val double = intent.getDoubleExtra("double", 0.0)
 
         val bundle = intent.extras
         bundle?.getDouble("double")
         bundle?.getFloat("float")
 
-        professor?.nome
-        professor?.sobrenome
-        professor?.matricula
+//        professor?.nome
+//        professor?.sobrenome
+//        professor?.matricula
 
         //etCreditCardNumber.text = Editable.Factory.getInstance().newEditable(numberCreditCard)
 

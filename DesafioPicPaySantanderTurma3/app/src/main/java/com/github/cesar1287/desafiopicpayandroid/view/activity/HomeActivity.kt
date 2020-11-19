@@ -23,7 +23,8 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
-        viewModel.getUsers()
+        //viewModel.getUsers()
+        viewModel.getTopRated()
 
         setupObservables()
     }
@@ -33,10 +34,10 @@ class HomeActivity : AppCompatActivity() {
             it?.let { users ->
                 recyclerView.apply {
                     layoutManager = LinearLayoutManager(this@HomeActivity)
-                    adapter = MainAdapter(users.usersList) { position ->
-                        val intent = Intent(this@HomeActivity, UserPaymentActivity::class.java)
-                        intent.putExtra(KEY_INTENT_USER, users.usersList[position])
-                        startActivity(intent)
+                    adapter = MainAdapter(users) { position ->
+//                        val intent = Intent(this@HomeActivity, UserPaymentActivity::class.java)
+//                        intent.putExtra(KEY_INTENT_USER, users.usersList[position])
+//                        startActivity(intent)
                     }
                 }
             }

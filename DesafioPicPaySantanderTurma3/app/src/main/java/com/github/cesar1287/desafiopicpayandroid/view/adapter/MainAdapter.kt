@@ -7,17 +7,19 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.github.cesar1287.desafiopicpayandroid.R
+import com.github.cesar1287.desafiopicpayandroid.databinding.MainListItemBinding
+import com.github.cesar1287.desafiopicpayandroid.model.UsersItem
 
 class MainAdapter(
-    private val userList: List<User>,
+    private val userList: List<UsersItem>,
     private val onItemClicked: (Int) -> Unit
 ) : RecyclerView.Adapter<MainAdapter.ViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         Log.i("RecyclerView", "onCreateViewHolder")
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.main_list_item, parent, false)
-        return ViewHolder(view)
+        val layoutInflater = LayoutInflater.from(parent.context)
+        val binding = MainListItemBinding.inflate(layoutInflater, parent, false)
+        return ViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -29,17 +31,19 @@ class MainAdapter(
         return userList.size
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(
+        private val binding: MainListItemBinding
+    ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(user: User, onItemClicked: (Int) -> Unit) = with(itemView) {
+        fun bind(user: UsersItem, onItemClicked: (Int) -> Unit) = with(itemView) {
 
-//            Glide.with(itemView.context).load(user.img).into(ivMainItemAvatar)
-//            tvMainItemUser.text = user.username
-//            tvMainItemName.text = user.name
-//
-//            vgMainItemContainer.setOnClickListener {
-//                onItemClicked(this@ViewHolder.adapterPosition)
-//            }
+            Glide.with(itemView.context).load(user.img).into(binding.ivMainItemAvatar)
+            binding.tvMainItemUser.text = user.username
+            binding.tvMainItemName.text = user.name
+
+            binding.vgMainItemContainer.setOnClickListener {
+                onItemClicked(this@ViewHolder.adapterPosition)
+            }
         }
     }
 }

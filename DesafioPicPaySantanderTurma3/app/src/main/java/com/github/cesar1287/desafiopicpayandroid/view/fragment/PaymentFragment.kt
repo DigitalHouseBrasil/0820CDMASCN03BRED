@@ -78,7 +78,7 @@ class PaymentFragment : BottomSheetDialogFragment() {
         Log.i("bundle", bundle?.getDouble("testeDouble").toString())
         Log.i("bundle", bundle?.getFloat("testeFloat").toString())
         Log.i("bundle", bundle?.getInt("testeInt").toString())
-        Log.i("bundle", bundle?.getParcelable<Professor>("professor").toString())
+        //Log.i("bundle", bundle?.getParcelable<Professor>("professor").toString())
 
 //        Log.i("teste - Fragment", "onViewCreated")
 //        turma3.text = "Aula 23"

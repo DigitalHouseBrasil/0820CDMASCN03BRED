@@ -15,7 +15,7 @@ class RegisterCreditCardActivity : AppCompatActivity() {
     //object - activity 1 (serializar)->(deserializar) object - activity
 
     private fun initComponents() {
-        val professor = Professor(nome = "Cesar", sobrenome = "Rodrigues", matricula = "123")
+        //val professor = Professor(nome = "Cesar", sobrenome = "Rodrigues", matricula = "123")
 
 //        btRegisterCreditCard.setOnClickListener {
 //            val intent = Intent(this, MainActivity::class.java)
