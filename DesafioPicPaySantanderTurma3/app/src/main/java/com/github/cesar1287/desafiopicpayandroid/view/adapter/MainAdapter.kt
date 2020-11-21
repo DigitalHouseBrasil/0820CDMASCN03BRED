@@ -2,11 +2,9 @@ package com.github.cesar1287.desafiopicpayandroid.view.adapter
 
 import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.github.cesar1287.desafiopicpayandroid.R
 import com.github.cesar1287.desafiopicpayandroid.databinding.MainListItemBinding
 import com.github.cesar1287.desafiopicpayandroid.model.UsersItem
 

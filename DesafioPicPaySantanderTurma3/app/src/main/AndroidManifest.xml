@@ -12,24 +12,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity
-            android:name=".view.activity.SettingsActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".view.activity.UserPaymentActivity" />
-        <activity android:name=".view.activity.HomeActivity">
+        <activity android:name=".tmdb.view.TmdbHomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".view.activity.SettingsActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".view.activity.UserPaymentActivity" />
+        <activity android:name=".view.activity.HomeActivity">
+        </activity>
         <activity android:name=".view.activity.PaymentActivity" />
         <activity android:name=".view.activity.RegisterCreditCardActivity" />
         <activity android:name=".view.activity.MainActivity2" />
         <activity
             android:name=".view.activity.MainActivity"
-            android:windowSoftInputMode="adjustResize"></activity>
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

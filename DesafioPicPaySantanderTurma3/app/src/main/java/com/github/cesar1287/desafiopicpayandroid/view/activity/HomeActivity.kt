@@ -24,7 +24,6 @@ class HomeActivity : AppCompatActivity() {
 
         viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
         //viewModel.getUsers()
-        viewModel.getTopRated()
 
         setupObservables()
     }

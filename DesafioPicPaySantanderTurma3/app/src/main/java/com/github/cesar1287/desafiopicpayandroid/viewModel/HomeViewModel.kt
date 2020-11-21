@@ -30,21 +30,4 @@ class HomeViewModel : ViewModel() {
             }
         }
     }
-
-    fun getTopRated() {
-        viewModelScope.launch {
-            when (val response = homeBusiness.getTopRated()) {
-                is ResponseApi.Success -> {
-//                    usersLiveData.postValue(
-////                        response.data as? Users
-//                    )
-                }
-                is ResponseApi.Error -> {
-//                    errorMessageLiveData.postValue(
-//                        response.message
-//                    )
-                }
-            }
-        }
-    }
 }

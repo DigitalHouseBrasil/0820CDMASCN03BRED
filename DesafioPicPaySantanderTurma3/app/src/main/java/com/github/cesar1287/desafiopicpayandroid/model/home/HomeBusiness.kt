@@ -11,8 +11,4 @@ class HomeBusiness {
     suspend fun getUsers(): ResponseApi {
         return repository.getUsers()
     }
-
-    suspend fun getTopRated(): ResponseApi {
-        return repository.getTopRated()
-    }
 }
