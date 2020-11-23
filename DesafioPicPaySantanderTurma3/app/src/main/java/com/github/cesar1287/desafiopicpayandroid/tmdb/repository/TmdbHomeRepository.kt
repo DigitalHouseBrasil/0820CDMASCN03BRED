@@ -6,9 +6,9 @@ import java.lang.Exception
 
 class TmdbHomeRepository {
 
-    suspend fun getTopRated(): ResponseApi {
+    suspend fun getTopRated(pageNumber: Int): ResponseApi {
         return try {
-            val response = ApiService.picpayApi.topRated()
+            val response = ApiService.picpayApi.topRated(pageNumber)
 
             if (response.isSuccessful) {
                 ResponseApi.Success(response.body())

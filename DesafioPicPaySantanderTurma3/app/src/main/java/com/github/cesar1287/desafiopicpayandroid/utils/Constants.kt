@@ -15,5 +15,12 @@ class Constants {
                 "Tr4u6Xu2qrhO2R-OMWdo6--YB7dkE77MPLsQ"
         const val API_CONTENT_TYPE_NAME = "Content-Type"
         const val API_CONTENT_TYPE_VALUE = "application/json;charset=utf-8"
+        const val QUERY_PARAM_LANGUAGE_LABEL = "language"
+        const val QUERY_PARAM_LANGUAGE_VALUE = "pt-BR"
+    }
+
+    object Paging {
+        const val PAGE_SIZE = 20
+        const val FIRST_PAGE = 1
     }
 }

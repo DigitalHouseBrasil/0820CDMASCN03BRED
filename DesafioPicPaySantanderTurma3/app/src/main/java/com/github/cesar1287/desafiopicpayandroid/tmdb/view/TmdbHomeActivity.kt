@@ -2,7 +2,7 @@ package com.github.cesar1287.desafiopicpayandroid.tmdb.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.github.cesar1287.desafiopicpayandroid.databinding.ActivityTmdbHomeBinding
@@ -13,38 +13,33 @@ class TmdbHomeActivity : AppCompatActivity() {
 
     private lateinit var viewModel: TmdbHomeViewModel
     private lateinit var binding: ActivityTmdbHomeBinding
+    private val tmdbHomeAdapter : TmdbHomeAdapter by lazy {
+        TmdbHomeAdapter {
+            val movieClicked = it
+            //chamar outra activity ou fragment
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTmdbHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setupRecyclerView()
+        loadContent()
+    }
+
+    private fun loadContent() {
         viewModel = ViewModelProvider(this).get(TmdbHomeViewModel::class.java)
-        viewModel.getTopRated()
-        setupObservables()
-    }
-
-    private fun setupObservables() {
-        viewModel.onResultTopRated.observe(this, {
-            it?.let { topRated ->
-                setupRecyclerView(topRated.results)
-            }
-        })
-
-        viewModel.onResultFailure.observe(this, {
-            it?.let {
-                Toast.makeText(this, it, Toast.LENGTH_LONG).show()
-            }
+        viewModel.moviePagedList?.observe(this, Observer { pagedList ->
+            tmdbHomeAdapter.submitList(pagedList)
         })
     }
 
-    private fun setupRecyclerView(movies: List<Result>) {
+    private fun setupRecyclerView() {
         binding.rvTmdbHome.apply {
             layoutManager = GridLayoutManager(this@TmdbHomeActivity, 2)
-            adapter = TmdbHomeAdapter(movies) {
-                val movieClicked = it
-                //chamar outra activity ou fragment
-            }
+            adapter = tmdbHomeAdapter
         }
     }
 }

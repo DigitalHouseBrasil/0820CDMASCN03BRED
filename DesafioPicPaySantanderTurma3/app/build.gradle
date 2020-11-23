@@ -57,12 +57,14 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle}"
     // LiveData
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:${versions.lifecycle}"
+    // Paging
+    implementation "androidx.paging:paging-runtime-ktx:${versions.paging}"
 
     implementation "de.hdodenhof:circleimageview:${versions.circleImageView}"
 
     implementation "com.squareup.retrofit2:retrofit:${versions.retrofit}"
     implementation "com.squareup.retrofit2:converter-gson:${versions.retrofit}"
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.3'
+    implementation "com.squareup.okhttp3:logging-interceptor:${versions.loggingInterceptor}"
 
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutines}"
 

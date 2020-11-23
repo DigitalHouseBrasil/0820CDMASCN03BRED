@@ -1,24 +1,22 @@
 package com.github.cesar1287.desafiopicpayandroid.api
 
-import android.util.TimeUtils
 import com.github.cesar1287.desafiopicpayandroid.utils.Constants.Api.API_AUTH_NAME
 import com.github.cesar1287.desafiopicpayandroid.utils.Constants.Api.API_AUTH_VALUE
 import com.github.cesar1287.desafiopicpayandroid.utils.Constants.Api.API_CONTENT_TYPE_NAME
 import com.github.cesar1287.desafiopicpayandroid.utils.Constants.Api.API_CONTENT_TYPE_VALUE
 import com.github.cesar1287.desafiopicpayandroid.utils.Constants.Api.BASE_URL
 import com.github.cesar1287.desafiopicpayandroid.utils.Constants.Api.BASE_URL_TMDB
-import okhttp3.HttpUrl
+import com.github.cesar1287.desafiopicpayandroid.utils.Constants.Api.QUERY_PARAM_LANGUAGE_LABEL
+import com.github.cesar1287.desafiopicpayandroid.utils.Constants.Api.QUERY_PARAM_LANGUAGE_VALUE
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.time.Duration
-import java.util.*
 import java.util.concurrent.TimeUnit
 
 object ApiService {
 
-    val picpayApi = getPicpayApiClient().create(PicpayApi::class.java)
+    val picpayApi: PicpayApi = getPicpayApiClient().create(PicpayApi::class.java)
 
     private fun getPicpayApiClient(): Retrofit {
         return Retrofit.Builder()
@@ -42,6 +40,13 @@ object ApiService {
                     .addHeader(API_AUTH_NAME, API_AUTH_VALUE)
                     .addHeader(API_CONTENT_TYPE_NAME, API_CONTENT_TYPE_VALUE)
                     .build()
+                chain.proceed(newRequest)
+            }
+            .addInterceptor { chain ->
+                val url = chain.request().url().newBuilder()
+                    .addQueryParameter(QUERY_PARAM_LANGUAGE_LABEL, QUERY_PARAM_LANGUAGE_VALUE)
+                    .build()
+                val newRequest = chain.request().newBuilder().url(url).build()
                 chain.proceed(newRequest)
             }
         return interceptor.build()

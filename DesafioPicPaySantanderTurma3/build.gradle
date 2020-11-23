@@ -10,9 +10,11 @@ buildscript {
             'retrofit'              :"2.9.0",
             'coroutines'            :"1.4.1",
             'lifecycle'             :"2.2.0",
+            'paging'                :"2.1.2",
             'circleImageView'       :"3.1.0",
             'fragment'              :"1.2.5",
-            'gradle'                :"4.0.1",
+            'gradle'                : '4.1.1',
+            'loggingInterceptor'    :"3.12.3",
             'material'              :"1.2.1"
     ]
 
