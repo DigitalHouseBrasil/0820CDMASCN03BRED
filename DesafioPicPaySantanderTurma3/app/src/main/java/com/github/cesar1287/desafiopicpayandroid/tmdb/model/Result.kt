@@ -32,7 +32,6 @@ data class Result(
 ) : Parcelable {
 
     companion object {
-        // use for ordering the items in view
         var DIFF_CALLBACK: DiffUtil.ItemCallback<Result> = object : DiffUtil.ItemCallback<Result>() {
             override fun areItemsTheSame(oldItem: Result, newItem: Result): Boolean {
                 return oldItem.id == newItem.id

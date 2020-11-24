@@ -31,7 +31,7 @@ class TmdbHomeActivity : AppCompatActivity() {
 
     private fun loadContent() {
         viewModel = ViewModelProvider(this).get(TmdbHomeViewModel::class.java)
-        viewModel.moviePagedList?.observe(this, Observer { pagedList ->
+        viewModel.moviePagedList?.observe(this, { pagedList ->
             tmdbHomeAdapter.submitList(pagedList)
         })
     }
