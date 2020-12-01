@@ -1,5 +1,7 @@
 package com.github.cesar1287.desafiopicpayandroid.tmdb.viewmodel
 
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.paging.LivePagedListBuilder
@@ -9,13 +11,17 @@ import com.github.cesar1287.desafiopicpayandroid.tmdb.model.Result
 import com.github.cesar1287.desafiopicpayandroid.tmdb.paging.TmdbDataSourceFactory
 import com.github.cesar1287.desafiopicpayandroid.utils.Constants.Paging.PAGE_SIZE
 
-class TmdbHomeViewModel : ViewModel() {
+class TmdbHomeViewModel(
+    application: Application
+) : AndroidViewModel(
+    application
+) {
 
     var moviePagedList: LiveData<PagedList<Result>>? = null
     private var tmdbLiveDataSource: LiveData<PageKeyedDataSource<Int, Result>>? = null
 
     init {
-        val tmdbDataSourceFactory = TmdbDataSourceFactory()
+        val tmdbDataSourceFactory = TmdbDataSourceFactory(application)
 
         tmdbLiveDataSource = tmdbDataSourceFactory.getSearchLiveDataSource()
 

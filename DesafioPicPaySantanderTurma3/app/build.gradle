@@ -53,12 +53,14 @@ dependencies {
     implementation "com.google.android.material:material:${versions.material}"
     implementation "androidx.fragment:fragment-ktx:${versions.fragment}"
 
-    // ViewModel
+    // JETPACK
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle}"
-    // LiveData
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:${versions.lifecycle}"
-    // Paging
     implementation "androidx.paging:paging-runtime-ktx:${versions.paging}"
+    implementation "androidx.room:room-runtime:${versions.room}"
+    kapt "androidx.room:room-compiler:${versions.room}"
+    implementation "androidx.room:room-ktx:${versions.room}"
+
 
     implementation "de.hdodenhof:circleimageview:${versions.circleImageView}"
 

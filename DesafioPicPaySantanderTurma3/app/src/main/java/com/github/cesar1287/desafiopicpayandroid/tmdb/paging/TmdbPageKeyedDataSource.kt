@@ -1,8 +1,10 @@
 package com.github.cesar1287.desafiopicpayandroid.tmdb.paging
 
+import android.content.Context
 import androidx.paging.PageKeyedDataSource
 import com.github.cesar1287.desafiopicpayandroid.api.ResponseApi
 import com.github.cesar1287.desafiopicpayandroid.extensions.getFullImagePath
+import com.github.cesar1287.desafiopicpayandroid.tmdb.database.TmdbDatabase
 import com.github.cesar1287.desafiopicpayandroid.tmdb.model.Result
 import com.github.cesar1287.desafiopicpayandroid.tmdb.model.TopRated
 import com.github.cesar1287.desafiopicpayandroid.tmdb.repository.TmdbHomeRepository
@@ -11,7 +13,9 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
 
-class TmdbPageKeyedDataSource : PageKeyedDataSource<Int, Result>() {
+class TmdbPageKeyedDataSource(
+    private val context: Context
+) : PageKeyedDataSource<Int, Result>() {
 
     private val repository by lazy {
         TmdbHomeRepository()
@@ -28,10 +32,16 @@ class TmdbPageKeyedDataSource : PageKeyedDataSource<Int, Result>() {
                     data.results.forEach {
                         it.posterPath = it.posterPath.getFullImagePath()
                     }
+
+                    val movieDao = TmdbDatabase.getDatabase(context).movieDao()
+                    movieDao.insertAllMovies(data.results)
+
                     callback.onResult(data.results, null, FIRST_PAGE + 1)
                 }
                 is ResponseApi.Error -> {
-                    callback.onResult(mutableListOf(), null, FIRST_PAGE + 1)
+                    val movieDao = TmdbDatabase.getDatabase(context).movieDao()
+                    val movies = movieDao.getAllMovies()
+                    callback.onResult(movies, null, FIRST_PAGE + 1)
                 }
             }
         }
@@ -50,6 +60,10 @@ class TmdbPageKeyedDataSource : PageKeyedDataSource<Int, Result>() {
                     data.results.forEach {
                         it.posterPath = it.posterPath.getFullImagePath()
                     }
+
+                    val movieDao = TmdbDatabase.getDatabase(context).movieDao()
+                    movieDao.insertAllMovies(data.results)
+
                     callback.onResult(data.results, page + 1)
                 }
                 is ResponseApi.Error -> {
@@ -72,6 +86,10 @@ class TmdbPageKeyedDataSource : PageKeyedDataSource<Int, Result>() {
                     data.results.forEach {
                         it.posterPath = it.posterPath.getFullImagePath()
                     }
+
+                    val movieDao = TmdbDatabase.getDatabase(context).movieDao()
+                    movieDao.insertAllMovies(data.results)
+
                     callback.onResult(data.results, page - 1)
                 }
                 is ResponseApi.Error -> {
