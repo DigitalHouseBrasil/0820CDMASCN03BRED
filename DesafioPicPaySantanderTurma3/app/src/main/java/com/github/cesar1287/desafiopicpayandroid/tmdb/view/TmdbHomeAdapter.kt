@@ -11,7 +11,7 @@ import com.github.cesar1287.desafiopicpayandroid.databinding.TmdbListItemBinding
 import com.github.cesar1287.desafiopicpayandroid.tmdb.model.Result
 
 class TmdbHomeAdapter (
-    private val onMovieClicked: (Result?) -> Unit
+    private val onMovieClicked: (id: Int) -> Unit
 ) : PagedListAdapter<Result, TmdbHomeAdapter.ViewHolder>(Result.DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -30,7 +30,7 @@ class TmdbHomeAdapter (
        binding.root
     ) {
 
-        fun bind(movie: Result?, onMovieClicked: (Result?) -> Unit) = with(binding) {
+        fun bind(movie: Result?, onMovieClicked: (id: Int) -> Unit) = with(binding) {
             Glide.with(itemView.context)
                 .load(movie?.posterPath)
                 .placeholder(R.drawable.ic_ilustration)
@@ -38,7 +38,7 @@ class TmdbHomeAdapter (
             tvTmdbName.text = movie?.title
 
             itemView.setOnClickListener {
-                onMovieClicked(movie)
+                onMovieClicked(movie?.id ?: -1)
             }
         }
     }

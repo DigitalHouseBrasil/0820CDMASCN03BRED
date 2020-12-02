@@ -23,4 +23,8 @@ class Constants {
         const val PAGE_SIZE = 20
         const val FIRST_PAGE = 1
     }
+
+    object MovieDetail {
+        const val KEY_INTENT_MOVIE_ID = "movieId"
+    }
 }
