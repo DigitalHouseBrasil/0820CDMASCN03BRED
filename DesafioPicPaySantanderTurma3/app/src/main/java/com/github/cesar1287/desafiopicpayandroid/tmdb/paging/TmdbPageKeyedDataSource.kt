@@ -30,7 +30,7 @@ class TmdbPageKeyedDataSource(
                 is ResponseApi.Success -> {
                     val data = response.data as TopRated
                     data.results.forEach {
-                        it.posterPath = it.posterPath.getFullImagePath()
+                        it.posterPath = it.posterPath?.getFullImagePath()
                     }
 
                     val movieDao = TmdbDatabase.getDatabase(context).movieDao()
@@ -58,7 +58,7 @@ class TmdbPageKeyedDataSource(
                 is ResponseApi.Success -> {
                     val data = response.data as TopRated
                     data.results.forEach {
-                        it.posterPath = it.posterPath.getFullImagePath()
+                        it.posterPath = it.posterPath?.getFullImagePath()
                     }
 
                     val movieDao = TmdbDatabase.getDatabase(context).movieDao()
@@ -84,7 +84,7 @@ class TmdbPageKeyedDataSource(
                 is ResponseApi.Success -> {
                     val data = response.data as TopRated
                     data.results.forEach {
-                        it.posterPath = it.posterPath.getFullImagePath()
+                        it.posterPath = it.posterPath?.getFullImagePath()
                     }
 
                     val movieDao = TmdbDatabase.getDatabase(context).movieDao()

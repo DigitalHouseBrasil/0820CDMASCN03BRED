@@ -39,7 +39,8 @@ data class Result(
     val voteAverage: Double,
     @ColumnInfo(name = "vote_count")
     @SerializedName("vote_count")
-    val voteCount: Int
+    val voteCount: Int,
+    val streaming: String?
 ) : Parcelable {
 
     companion object {
