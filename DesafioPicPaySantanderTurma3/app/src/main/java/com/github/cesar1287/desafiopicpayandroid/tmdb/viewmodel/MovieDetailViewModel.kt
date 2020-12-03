@@ -32,4 +32,10 @@ class MovieDetailViewModel(
         }
     }
 
+    fun updateMovie(movie: Result) {
+        viewModelScope.launch {
+            business.updateMovie(movie)
+        }
+    }
+
 }

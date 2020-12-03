@@ -19,4 +19,8 @@ class MovieDetailRepository(
     suspend fun deleteMovie(movie: Result) {
         movieDao.deleteMovie(movie)
     }
+
+    suspend fun updateMovie(movie: Result) {
+        movieDao.updateMovie(movie)
+    }
 }

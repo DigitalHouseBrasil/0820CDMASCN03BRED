@@ -18,4 +18,11 @@ class MovieDetailBusiness(
     suspend fun deleteMovie(movie: Result) {
         repository.deleteMovie(movie)
     }
+
+    suspend fun updateMovie(movie: Result) {
+        movie.apply {
+            title = "$title - teste update"
+        }
+        repository.updateMovie(movie)
+    }
 }

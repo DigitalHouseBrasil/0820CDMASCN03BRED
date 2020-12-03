@@ -33,18 +33,18 @@ class MovieDetailActivity : AppCompatActivity() {
         viewModel.onMovieDetailLoaded.observe(this, {
             movie = it
             binding.apply {
-                tvMovieDetailTitle.text = it.title
-                tvMovieDetailDescription.text = it.overview
+                tvMovieDetailTitle.text = it?.title
+                tvMovieDetailDescription.text = it?.overview
                 Glide
                     .with(this@MovieDetailActivity)
-                    .load(it.posterPath)
+                    .load(it?.posterPath)
                     .into(ivMovieDetailPoster)
             }
         })
 
         binding.btMovieDetailDelete.setOnClickListener {
             movie?.let {
-                viewModel.deleteMovie(it)
+                viewModel.updateMovie(it)
             }
             finish()
         }
