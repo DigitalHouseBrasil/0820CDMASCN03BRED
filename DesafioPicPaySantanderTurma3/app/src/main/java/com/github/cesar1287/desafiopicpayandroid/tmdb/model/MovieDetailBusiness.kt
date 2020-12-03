@@ -14,4 +14,8 @@ class MovieDetailBusiness(
     suspend fun getMovieById(movieId: Int): Result {
         return repository.getMovieById(movieId)
     }
+
+    suspend fun deleteMovie(movie: Result) {
+        repository.deleteMovie(movie)
+    }
 }

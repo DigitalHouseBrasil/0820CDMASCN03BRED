@@ -1,9 +1,6 @@
 package com.github.cesar1287.desafiopicpayandroid.tmdb.database
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.github.cesar1287.desafiopicpayandroid.tmdb.model.Result
 
 @Dao
@@ -17,4 +14,7 @@ interface MovieDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAllMovies(movies: List<Result>)
+
+    @Delete
+    suspend fun deleteMovie(movie: Result)
 }

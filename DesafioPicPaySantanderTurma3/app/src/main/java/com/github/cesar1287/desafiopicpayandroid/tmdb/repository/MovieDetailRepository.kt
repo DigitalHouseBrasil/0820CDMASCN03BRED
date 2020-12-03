@@ -8,8 +8,15 @@ class MovieDetailRepository(
     private val context: Context
 ) {
 
+    private val movieDao by lazy {
+        TmdbDatabase.getDatabase(context).movieDao()
+    }
+
     suspend fun getMovieById(movieId: Int): Result {
-        val movieDao = TmdbDatabase.getDatabase(context).movieDao()
         return movieDao.getMovieById(movieId)
+    }
+
+    suspend fun deleteMovie(movie: Result) {
+        movieDao.deleteMovie(movie)
     }
 }

@@ -26,4 +26,10 @@ class MovieDetailViewModel(
         }
     }
 
+    fun deleteMovie(movie: Result) {
+        viewModelScope.launch {
+            business.deleteMovie(movie)
+        }
+    }
+
 }

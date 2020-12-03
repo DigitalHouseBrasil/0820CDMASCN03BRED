@@ -4,16 +4,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
-import com.github.cesar1287.desafiopicpayandroid.R
 import com.github.cesar1287.desafiopicpayandroid.databinding.ActivityMovieDetailBinding
+import com.github.cesar1287.desafiopicpayandroid.tmdb.model.Result
 import com.github.cesar1287.desafiopicpayandroid.tmdb.viewmodel.MovieDetailViewModel
-import com.github.cesar1287.desafiopicpayandroid.utils.Constants
 import com.github.cesar1287.desafiopicpayandroid.utils.Constants.MovieDetail.KEY_INTENT_MOVIE_ID
 
 class MovieDetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMovieDetailBinding
     private lateinit var viewModel: MovieDetailViewModel
+    private var movie: Result? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +31,7 @@ class MovieDetailActivity : AppCompatActivity() {
 
     private fun setupObservables() {
         viewModel.onMovieDetailLoaded.observe(this, {
+            movie = it
             binding.apply {
                 tvMovieDetailTitle.text = it.title
                 tvMovieDetailDescription.text = it.overview
@@ -40,5 +41,12 @@ class MovieDetailActivity : AppCompatActivity() {
                     .into(ivMovieDetailPoster)
             }
         })
+
+        binding.btMovieDetailDelete.setOnClickListener {
+            movie?.let {
+                viewModel.deleteMovie(it)
+            }
+            finish()
+        }
     }
 }
