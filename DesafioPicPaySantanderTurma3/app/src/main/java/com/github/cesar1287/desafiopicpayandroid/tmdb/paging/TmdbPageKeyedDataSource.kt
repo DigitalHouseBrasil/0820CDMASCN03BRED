@@ -18,7 +18,7 @@ class TmdbPageKeyedDataSource(
 ) : PageKeyedDataSource<Int, Result>() {
 
     private val repository by lazy {
-        TmdbHomeRepository()
+        TmdbHomeRepository(context)
     }
 
     override fun loadInitial(

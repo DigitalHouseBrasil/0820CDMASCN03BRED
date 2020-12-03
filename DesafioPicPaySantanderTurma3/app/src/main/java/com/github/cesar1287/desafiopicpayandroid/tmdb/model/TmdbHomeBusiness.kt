@@ -1,13 +1,16 @@
 package com.github.cesar1287.desafiopicpayandroid.tmdb.model
 
+import android.content.Context
 import com.github.cesar1287.desafiopicpayandroid.api.ResponseApi
 import com.github.cesar1287.desafiopicpayandroid.tmdb.repository.TmdbHomeRepository
 import com.github.cesar1287.desafiopicpayandroid.utils.Constants.Api.BASE_URL_ORIGINAL_IMAGE
 
-class TmdbHomeBusiness {
+class TmdbHomeBusiness(
+    context: Context
+) {
 
     private val repository by lazy {
-        TmdbHomeRepository()
+        TmdbHomeRepository(context)
     }
 
     suspend fun getRated(pageNumber: Int): ResponseApi {
@@ -21,5 +24,9 @@ class TmdbHomeBusiness {
         } else {
             response
         }
+    }
+
+    suspend fun getAllMovies(): List<Result> {
+        return repository.getAllMovies()
     }
 }
