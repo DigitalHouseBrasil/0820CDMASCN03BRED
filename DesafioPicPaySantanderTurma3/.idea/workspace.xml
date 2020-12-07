@@ -17,7 +17,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aaf085af-34cf-40c1-bea6-2c75046d568a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/TmdbHomeRoomAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/model/Genre.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/model/Movie.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/model/ProductionCompany.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/model/ProductionCountry.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/model/SpokenLanguage.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -26,13 +30,14 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/model/TmdbHomeBusiness.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/model/TmdbHomeBusiness.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/paging/TmdbPageKeyedDataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/paging/TmdbPageKeyedDataSource.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/repository/TmdbHomeRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/repository/TmdbHomeRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/api/PicpayApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/api/PicpayApi.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/model/MovieDetailBusiness.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/model/MovieDetailBusiness.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/repository/MovieDetailRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/repository/MovieDetailRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/MovieDetailActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/MovieDetailActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/TmdbHomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/TmdbHomeActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/viewmodel/MovieDetailViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/viewmodel/MovieDetailViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/viewmodel/TmdbHomeViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/viewmodel/TmdbHomeViewModel.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +45,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_4_API_29]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -75,7 +80,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1iLBFGNDlmGTvxKDP4mpfkMgSxG" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -98,15 +105,15 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/paging" />
     <property name="multi-representation-previewC:/Users/rasec/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_selected" value="Custom views" />
     <property name="multi-representation-previewC:/Users/rasec/.gradle/caches/modules-2/files-2.1/de.hdodenhof/circleimageview/3.1.0/e5635e59d66b172f3e99c6a7044dc9535c95d180/circleimageview-3.1.0-sources.jar!/de/hdodenhof/circleimageview/CircleImageView.java_selected" value="Custom views" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.github.cesar1287.desafiopicpayandroid.model" />
       <recent name="com.github.cesar1287.desafiopicpayandroid.tmdb.model" />
       <recent name="com.github.cesar1287.desafiopicpayandroid.view.adapter" />
       <recent name="com.github.cesar1287.desafiopicpayandroid.view.fragment" />
       <recent name="com.github.cesar1287.desafiopicpayandroid.view.activity" />
-      <recent name="com.github.cesar1287.desafiopicpayandroid.utils" />
     </key>
     <key name="android.template.357078259">
       <recent name="com.github.cesar1287.desafiopicpayandroid" />
@@ -239,10 +246,10 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="636" y="270" key="#Configure_Path_Variables" timestamp="1607005274860">
+    <state x="636" y="270" key="#Configure_Path_Variables" timestamp="1607379351130">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="636" y="270" key="#Configure_Path_Variables/0.0.1920.1040@0.0.1920.1040" timestamp="1607005274860" />
+    <state x="636" y="270" key="#Configure_Path_Variables/0.0.1920.1040@0.0.1920.1040" timestamp="1607379351130" />
     <state x="402" y="86" width="1151" height="907" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606177047771">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -267,10 +274,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="493" y="83" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605743714297" />
-    <state x="580" y="188" width="845" height="664" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1605913426937">
+    <state x="580" y="188" width="845" height="664" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1607381681181">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="580" y="188" width="845" height="664" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605913426937" />
+    <state x="580" y="188" width="845" height="664" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607381681181" />
     <state x="537" y="23" key="#xdebugger.evaluate" timestamp="1606785189968">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -311,42 +318,42 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="580" y="96" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606093052939" />
-    <state width="1843" height="431" key="GridCell.Tab.0.bottom" timestamp="1606960619900">
+    <state width="1851" height="444" key="GridCell.Tab.0.bottom" timestamp="1607382549783">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1843" height="431" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606960619900" />
-    <state width="1843" height="431" key="GridCell.Tab.0.center" timestamp="1606960619900">
+    <state width="1851" height="444" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607382549783" />
+    <state width="1851" height="444" key="GridCell.Tab.0.center" timestamp="1607382549783">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1843" height="431" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606960619900" />
-    <state width="1843" height="431" key="GridCell.Tab.0.left" timestamp="1606960619900">
+    <state width="1851" height="444" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607382549783" />
+    <state width="1851" height="444" key="GridCell.Tab.0.left" timestamp="1607382549783">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1843" height="431" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606960619900" />
-    <state width="1843" height="431" key="GridCell.Tab.0.right" timestamp="1606960619900">
+    <state width="1851" height="444" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607382549783" />
+    <state width="1851" height="444" key="GridCell.Tab.0.right" timestamp="1607382549783">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1843" height="431" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606960619900" />
-    <state width="1843" height="431" key="GridCell.Tab.1.bottom" timestamp="1606960619900">
+    <state width="1851" height="444" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607382549783" />
+    <state width="1851" height="444" key="GridCell.Tab.1.bottom" timestamp="1607382549784">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1843" height="431" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606960619900" />
-    <state width="1843" height="431" key="GridCell.Tab.1.center" timestamp="1606960619900">
+    <state width="1851" height="444" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607382549784" />
+    <state width="1851" height="444" key="GridCell.Tab.1.center" timestamp="1607382549784">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1843" height="431" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606960619900" />
-    <state width="1843" height="431" key="GridCell.Tab.1.left" timestamp="1606960619900">
+    <state width="1851" height="444" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607382549784" />
+    <state width="1851" height="444" key="GridCell.Tab.1.left" timestamp="1607382549784">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1843" height="431" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606960619900" />
-    <state width="1843" height="431" key="GridCell.Tab.1.right" timestamp="1606960619900">
+    <state width="1851" height="444" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607382549784" />
+    <state width="1851" height="444" key="GridCell.Tab.1.right" timestamp="1607382549784">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1843" height="431" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606960619900" />
-    <state x="246" y="33" key="SettingsEditor" timestamp="1606947065616">
+    <state width="1851" height="444" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607382549784" />
+    <state x="246" y="33" key="SettingsEditor" timestamp="1607379398078">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="246" y="33" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606947065616" />
+    <state x="246" y="33" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607379398078" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1605913036048">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -371,10 +378,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602591422850" />
-    <state x="479" y="58" width="1156" height="924" key="find.popup" timestamp="1606949098447">
+    <state x="479" y="58" width="1156" height="924" key="find.popup" timestamp="1607380453328">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="479" y="58" width="1156" height="924" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606949098447" />
+    <state x="479" y="58" width="1156" height="924" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607380453328" />
     <state x="691" y="177" key="refactoring.ChangeSignatureDialog" timestamp="1606955895797">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -392,34 +399,284 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/viewmodel/TmdbHomeViewModel.kt</url>
-          <line>29</line>
-          <option name="timeStamp" value="51" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/TmdbHomeActivity.kt</url>
+          <line>32</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/TmdbHomeActivity.kt</url>
+          <line>34</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/TmdbHomeActivity.kt</url>
+          <line>39</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/TmdbHomeActivity.kt</url>
+          <line>43</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/TmdbHomeActivity.kt</url>
+          <line>45</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/TmdbHomeActivity.kt</url>
+          <line>46</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/TmdbHomeActivity.kt</url>
+          <line>47</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/TmdbHomeActivity.kt</url>
+          <line>48</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/TmdbHomeActivity.kt</url>
+          <line>53</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/TmdbHomeActivity.kt</url>
+          <line>54</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/TmdbHomeActivity.kt</url>
+          <line>55</line>
+          <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/viewmodel/TmdbHomeViewModel.kt</url>
-          <line>30</line>
-          <option name="timeStamp" value="52" />
+          <line>33</line>
+          <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/viewmodel/TmdbHomeViewModel.kt</url>
-          <line>31</line>
-          <option name="timeStamp" value="53" />
+          <line>34</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/viewmodel/TmdbHomeViewModel.kt</url>
+          <line>35</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/viewmodel/TmdbHomeViewModel.kt</url>
+          <line>36</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/viewmodel/TmdbHomeViewModel.kt</url>
+          <line>37</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/viewmodel/TmdbHomeViewModel.kt</url>
+          <line>40</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/viewmodel/TmdbHomeViewModel.kt</url>
+          <line>41</line>
+          <option name="timeStamp" value="74" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/model/TmdbHomeBusiness.kt</url>
+          <line>16</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/model/TmdbHomeBusiness.kt</url>
+          <line>17</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/model/TmdbHomeBusiness.kt</url>
+          <line>18</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/model/TmdbHomeBusiness.kt</url>
+          <line>22</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/model/TmdbHomeBusiness.kt</url>
+          <line>24</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/TmdbHomeActivity.kt</url>
+          <line>22</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/TmdbHomeActivity.kt</url>
+          <line>23</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/MovieDetailActivity.kt</url>
+          <line>23</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/MovieDetailActivity.kt</url>
+          <line>25</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/MovieDetailActivity.kt</url>
+          <line>27</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/MovieDetailActivity.kt</url>
           <line>29</line>
-          <option name="timeStamp" value="54" />
+          <option name="timeStamp" value="88" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/repository/TmdbHomeRepository.kt</url>
-          <line>32</line>
-          <option name="timeStamp" value="55" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/repository/TmdbHomeRepository.kt</url>
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/MovieDetailActivity.kt</url>
           <line>33</line>
-          <option name="timeStamp" value="56" />
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/MovieDetailActivity.kt</url>
+          <line>34</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/MovieDetailActivity.kt</url>
+          <line>36</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/MovieDetailActivity.kt</url>
+          <line>35</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/MovieDetailActivity.kt</url>
+          <line>37</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/MovieDetailActivity.kt</url>
+          <line>38</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/MovieDetailActivity.kt</url>
+          <line>40</line>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/MovieDetailActivity.kt</url>
+          <line>39</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/view/MovieDetailActivity.kt</url>
+          <line>41</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/viewmodel/MovieDetailViewModel.kt</url>
+          <line>24</line>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/viewmodel/MovieDetailViewModel.kt</url>
+          <line>25</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/viewmodel/MovieDetailViewModel.kt</url>
+          <line>26</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/viewmodel/MovieDetailViewModel.kt</url>
+          <line>27</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/viewmodel/MovieDetailViewModel.kt</url>
+          <line>28</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/model/MovieDetailBusiness.kt</url>
+          <line>17</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/repository/MovieDetailRepository.kt</url>
+          <line>19</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/repository/MovieDetailRepository.kt</url>
+          <line>21</line>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/repository/MovieDetailRepository.kt</url>
+          <line>22</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/repository/MovieDetailRepository.kt</url>
+          <line>24</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/repository/MovieDetailRepository.kt</url>
+          <line>25</line>
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/repository/MovieDetailRepository.kt</url>
+          <line>27</line>
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/repository/MovieDetailRepository.kt</url>
+          <line>31</line>
+          <option name="timeStamp" value="110" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/model/MovieDetailBusiness.kt</url>
+          <line>18</line>
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/model/MovieDetailBusiness.kt</url>
+          <line>19</line>
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/model/MovieDetailBusiness.kt</url>
+          <line>20</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/model/MovieDetailBusiness.kt</url>
+          <line>21</line>
+          <option name="timeStamp" value="114" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/cesar1287/desafiopicpayandroid/tmdb/model/MovieDetailBusiness.kt</url>
+          <line>24</line>
+          <option name="timeStamp" value="115" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

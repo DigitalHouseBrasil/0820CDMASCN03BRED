@@ -1,6 +1,9 @@
 package com.github.cesar1287.desafiopicpayandroid.tmdb.model
 
 import android.content.Context
+import com.github.cesar1287.desafiopicpayandroid.api.ResponseApi
+import com.github.cesar1287.desafiopicpayandroid.extensions.getFullImagePath
+import com.github.cesar1287.desafiopicpayandroid.model.Movie
 import com.github.cesar1287.desafiopicpayandroid.tmdb.repository.MovieDetailRepository
 
 class MovieDetailBusiness(
@@ -11,8 +14,17 @@ class MovieDetailBusiness(
         MovieDetailRepository(context)
     }
 
-    suspend fun getMovieById(movieId: Int): Result {
-        return repository.getMovieById(movieId)
+    suspend fun getMovieById(movieId: Int): ResponseApi {
+        return when(val response = repository.getMovieById(movieId)){
+            is ResponseApi.Success -> {
+                val movie = response.data as? Movie
+                movie?.poster_path = movie?.poster_path?.getFullImagePath()
+                ResponseApi.Success(movie)
+            }
+            is ResponseApi.Error ->{
+                response
+            }
+        }
     }
 
     suspend fun deleteMovie(movie: Result) {

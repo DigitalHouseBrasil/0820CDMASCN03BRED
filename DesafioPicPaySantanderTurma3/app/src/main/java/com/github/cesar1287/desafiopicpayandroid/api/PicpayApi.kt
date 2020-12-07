@@ -1,5 +1,6 @@
 package com.github.cesar1287.desafiopicpayandroid.api
 
+import com.github.cesar1287.desafiopicpayandroid.model.Movie
 import com.github.cesar1287.desafiopicpayandroid.tmdb.model.TopRated
 import com.github.cesar1287.desafiopicpayandroid.model.Users
 import retrofit2.Response
@@ -19,6 +20,11 @@ interface PicpayApi {
 
     @GET("movie/latest")
     suspend fun latest(): Response<TopRated>
+
+    @GET("movie/{movie_id}")
+    suspend fun getMovieById(
+        @Path("movie_id") movieId: Int
+    ): Response<Movie>
 
     @GET("movie/{movie_id}/{movie_video}")
     suspend fun movieDetails(

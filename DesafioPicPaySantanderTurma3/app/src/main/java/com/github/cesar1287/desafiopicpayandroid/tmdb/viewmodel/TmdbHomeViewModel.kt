@@ -8,9 +8,12 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PageKeyedDataSource
 import androidx.paging.PagedList
+import com.github.cesar1287.desafiopicpayandroid.api.ResponseApi
 import com.github.cesar1287.desafiopicpayandroid.tmdb.model.Result
 import com.github.cesar1287.desafiopicpayandroid.tmdb.model.TmdbHomeBusiness
+import com.github.cesar1287.desafiopicpayandroid.tmdb.model.TopRated
 import com.github.cesar1287.desafiopicpayandroid.tmdb.paging.TmdbDataSourceFactory
+import com.github.cesar1287.desafiopicpayandroid.utils.Constants.Paging.FIRST_PAGE
 import com.github.cesar1287.desafiopicpayandroid.utils.Constants.Paging.PAGE_SIZE
 import kotlinx.coroutines.launch
 
@@ -20,22 +23,45 @@ class TmdbHomeViewModel(
     application
 ) {
 
-    val onMoviesListLoaded: MutableLiveData<List<Result>> = MutableLiveData()
+    val onResultTopRated: MutableLiveData<TopRated> = MutableLiveData()
+    val onResultFailure: MutableLiveData<String> = MutableLiveData()
 
     private val business by lazy {
         TmdbHomeBusiness(application)
     }
 
-    fun getAllMovies() {
+    fun getTopRated() {
         viewModelScope.launch {
-            onMoviesListLoaded.postValue(
-                business.getAllMovies()
-            )
+            when(val response = business.getRated(FIRST_PAGE)) {
+                is ResponseApi.Success -> {
+                    onResultTopRated.postValue(
+                        response.data as TopRated
+                    )
+                }
+                is ResponseApi.Error -> {
+                    onResultFailure.postValue(response.message)
+                }
+            }
         }
     }
 
+//    private val business by lazy {
+//        TmdbHomeBusiness(application)
+//    }
+//
+//    fun getAllMovies() {
+//        viewModelScope.launch {
+//            onMoviesListLoaded.postValue(
+//                business.getRated(1)
+//            )
+//        }
+//    }
+
+    // activity(viewModel) -> fragment(viewModel) -> viewpager + paging
+
     //    var moviePagedList: LiveData<PagedList<Result>>? = null
 //    private var tmdbLiveDataSource: LiveData<PageKeyedDataSource<Int, Result>>? = null
+//    val onMoviesListLoaded: MutableLiveData<TopRated> = MutableLiveData()
 //
 //    init {
 //        val tmdbDataSourceFactory = TmdbDataSourceFactory(application)
@@ -48,27 +74,5 @@ class TmdbHomeViewModel(
 //
 //        moviePagedList = LivePagedListBuilder(tmdbDataSourceFactory, pagedListConfig)
 //            .build()
-//    }
-
-//    val onResultTopRated: MutableLiveData<TopRated> = MutableLiveData()
-//    val onResultFailure: MutableLiveData<String> = MutableLiveData()
-//
-//    private val business by lazy {
-//        TmdbHomeBusiness()
-//    }
-//
-//    fun getTopRated() {
-//        viewModelScope.launch {
-//            when(val response = business.getRated(FIRST_PAGE)) {
-//                is ResponseApi.Success -> {
-//                    onResultTopRated.postValue(
-//                        response.data as TopRated
-//                    )
-//                }
-//                is ResponseApi.Error -> {
-//                    onResultFailure.postValue(response.message)
-//                }
-//            }
-//        }
 //    }
 }

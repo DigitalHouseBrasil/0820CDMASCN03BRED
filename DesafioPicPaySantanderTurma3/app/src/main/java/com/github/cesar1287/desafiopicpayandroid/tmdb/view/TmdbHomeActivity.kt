@@ -41,11 +41,11 @@ class TmdbHomeActivity : AppCompatActivity() {
     }
 
     private fun loadContent() {
-        viewModel.getAllMovies()
+        viewModel.getTopRated()
 
-        viewModel.onMoviesListLoaded.observe(this, {
+        viewModel.onResultTopRated.observe(this, {
             moviesList.clear()
-            moviesList.addAll(it)
+            moviesList.addAll(it.results)
             tmdbHomeAdapter.notifyDataSetChanged()
         })
     }
