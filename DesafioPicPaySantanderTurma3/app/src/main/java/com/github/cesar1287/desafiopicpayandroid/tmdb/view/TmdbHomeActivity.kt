@@ -15,10 +15,8 @@ class TmdbHomeActivity : AppCompatActivity() {
     private lateinit var viewModel: TmdbHomeViewModel
     private lateinit var binding: ActivityTmdbHomeBinding
 
-    private val moviesList = mutableListOf<Result>()
-
-    private val tmdbHomeAdapter : TmdbHomeRoomAdapter by lazy {
-        TmdbHomeRoomAdapter(moviesList) { movieId ->
+    private val tmdbHomeAdapter : TmdbHomeAdapter by lazy {
+        TmdbHomeAdapter { movieId ->
             val intent = Intent(this@TmdbHomeActivity, MovieDetailActivity::class.java)
             intent.putExtra(KEY_INTENT_MOVIE_ID, movieId)
             startActivity(intent)
@@ -41,12 +39,8 @@ class TmdbHomeActivity : AppCompatActivity() {
     }
 
     private fun loadContent() {
-        viewModel.getTopRated()
-
-        viewModel.onResultTopRated.observe(this, {
-            moviesList.clear()
-            moviesList.addAll(it.results)
-            tmdbHomeAdapter.notifyDataSetChanged()
+        viewModel.moviePagedList?.observe(this, {
+            tmdbHomeAdapter.submitList(it)
         })
     }
 

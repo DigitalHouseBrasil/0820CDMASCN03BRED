@@ -30,7 +30,7 @@ class TmdbHomeRepository(
     }
 
     suspend fun getAllMovies(): List<Result> {
-        val movieDao = TmdbDatabase.getDatabase(context).movieDao()
-        return movieDao.getAllMovies()
+        val resultDao = TmdbDatabase.getDatabase(context).resultDao()
+        return resultDao.getAllMovies()
     }
 }

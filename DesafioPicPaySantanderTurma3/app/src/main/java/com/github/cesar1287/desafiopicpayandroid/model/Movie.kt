@@ -1,33 +1,50 @@
 package com.github.cesar1287.desafiopicpayandroid.model
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.Ignore
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
+@Entity(tableName = "movies")
 data class Movie(
-    val adult: Boolean,
-    @SerializedName("backdrop_path")
-    val backdrop_path: String?,
-    @SerializedName("belongs_to_collection")
-    val belongs_to_collection: Any?,
-    val budget: Int,
-    val genres: List<Genre>,
-    val homepage: String?,
+    @PrimaryKey
     val id: Int,
-    val imdb_id: String?,
-    val original_language: String,
-    val original_title: String,
+    val adult: Boolean,
+    @ColumnInfo(name = "backdrop_path")
+    @SerializedName("backdrop_path")
+    val backdropPath: String?,
+    val budget: Int,
+    val homepage: String?,
+    @ColumnInfo(name = "imdb_id")
+    @SerializedName("imdb_id")
+    val imdbId: String?,
+    @ColumnInfo(name = "original_language")
+    @SerializedName("original_language")
+    val originalLanguage: String,
+    @ColumnInfo(name = "original_title")
+    @SerializedName("original_title")
+    val originalTitle: String,
     val overview: String?,
     val popularity: Double,
-    var poster_path: String?,
-    val production_companies: List<ProductionCompany>,
-    val production_countries: List<ProductionCountry>,
-    val release_date: String,
+    @ColumnInfo(name = "poster_path")
+    @SerializedName("poster_path")
+    var posterPath: String?,
+    @ColumnInfo(name = "release_date")
+    @SerializedName("release_date")
+    val releaseDate: String,
     val revenue: Int,
     val runtime: Int?,
-    val spoken_languages: List<SpokenLanguage>,
     val status: String,
-    val tagline: String?,
+    @ColumnInfo(name = "tagline")
+    @SerializedName("tagline")
+    val tagLine: String?,
     val title: String,
     val video: Boolean,
-    val vote_average: Double,
-    val vote_count: Int
+    @ColumnInfo(name = "vote_average")
+    @SerializedName("vote_average")
+    val voteAverage: Double,
+    @ColumnInfo(name = "vote_count")
+    @SerializedName("vote_count")
+    val voteCount: Int
 )

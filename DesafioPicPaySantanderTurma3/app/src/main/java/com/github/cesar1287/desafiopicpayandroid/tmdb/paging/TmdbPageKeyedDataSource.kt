@@ -33,13 +33,13 @@ class TmdbPageKeyedDataSource(
                         it.posterPath = it.posterPath.getFullImagePath()
                     }
 
-                    val movieDao = TmdbDatabase.getDatabase(context).movieDao()
+                    val movieDao = TmdbDatabase.getDatabase(context).resultDao()
                     movieDao.insertAllMovies(data.results)
 
                     callback.onResult(data.results, null, FIRST_PAGE + 1)
                 }
                 is ResponseApi.Error -> {
-                    val movieDao = TmdbDatabase.getDatabase(context).movieDao()
+                    val movieDao = TmdbDatabase.getDatabase(context).resultDao()
                     val movies = movieDao.getAllMovies()
                     callback.onResult(movies, null, FIRST_PAGE + 1)
                 }
@@ -61,7 +61,7 @@ class TmdbPageKeyedDataSource(
                         it.posterPath = it.posterPath.getFullImagePath()
                     }
 
-                    val movieDao = TmdbDatabase.getDatabase(context).movieDao()
+                    val movieDao = TmdbDatabase.getDatabase(context).resultDao()
                     movieDao.insertAllMovies(data.results)
 
                     callback.onResult(data.results, page + 1)
@@ -87,7 +87,7 @@ class TmdbPageKeyedDataSource(
                         it.posterPath = it.posterPath.getFullImagePath()
                     }
 
-                    val movieDao = TmdbDatabase.getDatabase(context).movieDao()
+                    val movieDao = TmdbDatabase.getDatabase(context).resultDao()
                     movieDao.insertAllMovies(data.results)
 
                     callback.onResult(data.results, page - 1)

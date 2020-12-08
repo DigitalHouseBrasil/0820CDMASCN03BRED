@@ -18,7 +18,7 @@ class MovieDetailBusiness(
         return when(val response = repository.getMovieById(movieId)){
             is ResponseApi.Success -> {
                 val movie = response.data as? Movie
-                movie?.poster_path = movie?.poster_path?.getFullImagePath()
+                movie?.posterPath = movie?.posterPath?.getFullImagePath()
                 ResponseApi.Success(movie)
             }
             is ResponseApi.Error ->{
@@ -36,5 +36,9 @@ class MovieDetailBusiness(
             title = "$title - teste update"
         }
         repository.updateMovie(movie)
+    }
+
+    suspend fun insertMovie(movie: Movie) {
+        repository.insertMovie(movie)
     }
 }

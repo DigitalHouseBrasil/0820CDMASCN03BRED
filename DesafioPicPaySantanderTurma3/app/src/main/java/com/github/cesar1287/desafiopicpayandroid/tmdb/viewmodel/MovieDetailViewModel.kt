@@ -50,4 +50,10 @@ class MovieDetailViewModel(
         }
     }
 
+    fun insertMovie(movie: Movie) {
+        viewModelScope.launch {
+            business.insertMovie(movie)
+        }
+    }
+
 }

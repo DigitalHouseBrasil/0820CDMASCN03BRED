@@ -50,13 +50,13 @@
     -->
 
     <Button
-        android:id="@+id/btMovieDetailDelete"
+        android:id="@+id/btMovieDetailInclude"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="Excluir filme"/>
+        android:text="Salvar filme"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

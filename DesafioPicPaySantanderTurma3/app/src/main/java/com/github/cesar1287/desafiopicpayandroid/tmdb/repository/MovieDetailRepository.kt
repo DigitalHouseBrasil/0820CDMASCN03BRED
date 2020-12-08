@@ -3,6 +3,7 @@ package com.github.cesar1287.desafiopicpayandroid.tmdb.repository
 import android.content.Context
 import com.github.cesar1287.desafiopicpayandroid.api.ApiService
 import com.github.cesar1287.desafiopicpayandroid.api.ResponseApi
+import com.github.cesar1287.desafiopicpayandroid.model.Movie
 import com.github.cesar1287.desafiopicpayandroid.tmdb.database.TmdbDatabase
 import com.github.cesar1287.desafiopicpayandroid.tmdb.model.Result
 import java.lang.Exception
@@ -10,6 +11,10 @@ import java.lang.Exception
 class MovieDetailRepository(
     private val context: Context
 ) {
+
+    private val resultDao by lazy {
+        TmdbDatabase.getDatabase(context).resultDao()
+    }
 
     private val movieDao by lazy {
         TmdbDatabase.getDatabase(context).movieDao()
@@ -34,10 +39,14 @@ class MovieDetailRepository(
     }
 
     suspend fun deleteMovie(movie: Result) {
-        movieDao.deleteMovie(movie)
+        resultDao.deleteMovie(movie)
     }
 
     suspend fun updateMovie(movie: Result) {
-        movieDao.updateMovie(movie)
+        resultDao.updateMovie(movie)
+    }
+
+    suspend fun insertMovie(movie: Movie) {
+        movieDao.insertMovie(movie)
     }
 }
