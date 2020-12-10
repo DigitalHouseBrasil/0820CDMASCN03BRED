@@ -28,7 +28,7 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -72,6 +72,14 @@ dependencies {
 
     implementation "com.github.bumptech.glide:glide:${versions.glide}"
     kapt "com.github.bumptech.glide:compiler:${versions.glide}"
+
+    //Facebook
+    implementation "com.facebook.android:facebook-android-sdk:${versions.facebook}"
+
+    //Google
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+
+    implementation "androidx.multidex:multidex:2.0.1"
 
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

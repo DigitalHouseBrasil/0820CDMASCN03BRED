@@ -3,6 +3,7 @@ package com.github.cesar1287.desafiopicpayandroid.tmdb.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.github.cesar1287.desafiopicpayandroid.databinding.ActivityTmdbHomeBinding

@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        startActivity(Intent(this, LoginActivity::class.java))
+
         val numberCreditCard = intent.getStringExtra(KEY_CREDIT_CARD_NUMBER)
         //val professor = intent.getParcelableExtra<Professor>(KEY_TEACHER)
         val double = intent.getDoubleExtra("double", 0.0)
