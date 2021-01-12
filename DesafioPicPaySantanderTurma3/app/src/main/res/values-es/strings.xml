@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="facebook_app_id">418281649540282</string>
-    <string name="fb_login_protocol_scheme">fb418281649540282</string>
+    <string name="facebook_application_id">418281649540282</string>
+    <string name="facebook_login_protocol_scheme">fb418281649540282</string>
     <string name="app_name">DesafioPicPayAndroid</string>
     <string name="register_credit_card">Cartão de crédito</string>
     <string name="credit_card_cvv">CVV</string>

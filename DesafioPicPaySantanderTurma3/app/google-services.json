@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1057325947407",
+    "project_id": "turma-3-santander-coders",
+    "storage_bucket": "turma-3-santander-coders.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057325947407:android:b938cc593cb2f2f38a617a",
+        "android_client_info": {
+          "package_name": "com.github.cesar1287.desafiopicpayandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1057325947407-sfljio066vl3gk5ieo5sleeb6c829a6k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYssfvRyhJWqoq_ED8VyV8J_hzbQlWAdU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1057325947407-sfljio066vl3gk5ieo5sleeb6c829a6k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
