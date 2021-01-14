@@ -87,12 +87,15 @@ class LoginActivity : AppCompatActivity() {
         firebaseAuth.currentUser?.let {
             val documentReference = firebaseFirestore.collection(FIRESTORE_COLLECTION_USERS)
                 .document(it.uid)
-            documentReference.get()
-                .addOnSuccessListener {
-                    val user = it.toObject<UserFirestore>()
-                }.addOnFailureListener {
-                    it.localizedMessage
+            documentReference.addSnapshotListener {
+                    value, error ->
+                error?.let {
+                    Toast.makeText(this, it.localizedMessage, Toast.LENGTH_LONG).show()
+                } ?: run {
+                    val user = value?.toObject<UserFirestore>()
+                    user?.email
                 }
+            }
         } ?: run {
             // Create and launch sign-in intent
             initSignUp()
