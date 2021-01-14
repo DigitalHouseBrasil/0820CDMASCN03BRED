@@ -3,35 +3,25 @@ package com.github.cesar1287.desafiopicpayandroid.view.activity
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isVisible
 import com.facebook.*
-import com.facebook.login.LoginManager
-import com.facebook.login.LoginResult
 import com.firebase.ui.auth.AuthUI
-import com.firebase.ui.auth.IdpResponse
 import com.firebase.ui.auth.IdpResponse.*
 import com.github.cesar1287.desafiopicpayandroid.databinding.ActivityLoginBinding
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.common.api.ApiException
-import com.google.android.gms.tasks.Task
-import com.google.firebase.auth.FacebookAuthCredential
-import com.google.firebase.auth.FacebookAuthProvider
-import com.google.firebase.auth.FirebaseAuthUserCollisionException
-import com.google.firebase.auth.FirebaseAuthWeakPasswordException
+import com.github.cesar1287.desafiopicpayandroid.model.UserFirestore
+import com.google.firebase.Timestamp
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.GeoPoint
+import com.google.firebase.firestore.SetOptions
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
+import java.util.*
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
-
-    private val RC_SIGN_IN = 999
 
     private val callbackManager by lazy {
         CallbackManager.Factory.create()
@@ -39,19 +29,19 @@ class LoginActivity : AppCompatActivity() {
 
     private val providers by lazy {
         arrayListOf(
-           AuthUI.IdpConfig.EmailBuilder().build(),
-           AuthUI.IdpConfig.AnonymousBuilder().build(),
-           AuthUI.IdpConfig.FacebookBuilder().build(),
-           AuthUI.IdpConfig.AppleBuilder().build(),
-           AuthUI.IdpConfig.TwitterBuilder().build(),
-           AuthUI.IdpConfig.GoogleBuilder().build()
+            AuthUI.IdpConfig.EmailBuilder().build(),
+            AuthUI.IdpConfig.FacebookBuilder().build(),
+            AuthUI.IdpConfig.GoogleBuilder().build(),
+            AuthUI.IdpConfig.AnonymousBuilder().build(),
         )
     }
 
-    private lateinit var signInClient: GoogleSignInClient
-
     private val firebaseAuth by lazy {
         Firebase.auth
+    }
+
+    private val firebaseFirestore by lazy {
+        Firebase.firestore
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,109 +49,70 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        signUp()
-//
-//        //login google
-//        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-//            .requestEmail()
-//            .build()
-//
-//        binding.signInButton.setOnClickListener {
-//            val signInIntent: Intent = signInClient.signInIntent
-//            startActivityForResult(signInIntent, RC_SIGN_IN)
-//        }
-//
-//        signInClient = GoogleSignIn.getClient(this, gso)
-//
-//        LoginManager.getInstance().registerCallback(callbackManager,
-//            object : FacebookCallback<LoginResult?> {
-//                override fun onSuccess(loginResult: LoginResult?) {
-//                    val token = loginResult?.accessToken
-//                    val facebookCredential = FacebookAuthProvider.getCredential(token?.token ?: "")
-//                    firebaseAuth.signInWithCredential(facebookCredential)
-//                        .addOnSuccessListener {
-//                            binding.tvLoginUserName.text = it.user?.displayName
-//                        }.addOnFailureListener {
-//                            Log.i("teste", it.toString())
-//                            when(it) {
-//                                is FirebaseAuthWeakPasswordException -> {
-//                                    Toast.makeText(this@LoginActivity, "Senha fraca", Toast.LENGTH_SHORT).show()
-//                                }
-//                                is FirebaseAuthUserCollisionException -> {
-//                                    Toast.makeText(this@LoginActivity, "Esse usuário já existe", Toast.LENGTH_SHORT).show()
-//                                }
-//                                else -> {
-//                                    Toast.makeText(this@LoginActivity, it.localizedMessage, Toast.LENGTH_SHORT).show()
-//                                }
-//                            }
-//                        }
-//                }
-//
-//                override fun onCancel() {
-//                    Log.i("teste", "teste")
-//                }
-//
-//                override fun onError(exception: FacebookException) {
-//                    exception
-//                }
-//            })
+        setupObservables()
     }
 
-    private fun signUp() {
-        binding.btLoginSignUpEmail.setOnClickListener {
-            firebaseAuth.createUserWithEmailAndPassword("teste1@teste.com", "123456")
+    private fun setupObservables() {
+        binding.btLoginSave.setOnClickListener {
+            val user = hashMapOf(
+                "name" to binding.tieLoginName.text.toString(),
+                "last_name" to binding.tieLoginLastName.text.toString(),
+                "email" to binding.tieLoginEmail.text.toString(),
+                "phone" to binding.tieLoginPhone.text.toString(),
+                "preferences" to hashMapOf(
+                    "dark_mode" to true,
+                    "language" to "pt-BR",
+                    "geopoint" to GeoPoint(34.0, 22.0),
+                    "last_sync" to Timestamp(Date())
+                )
+            )
+
+            firebaseFirestore.collection(FIRESTORE_COLLECTION_USERS).document(firebaseAuth.currentUser?.uid ?: "")
+                .set(user, SetOptions.merge())
                 .addOnSuccessListener {
-                    binding.tvLoginUserName.text = it.user?.displayName
+                    Toast.makeText(this, "Salvo com sucesso", Toast.LENGTH_LONG).show()
                 }.addOnFailureListener {
-                    Log.i("teste", it.toString())
-                    when(it) {
-                        is FirebaseAuthWeakPasswordException -> {
-                            Toast.makeText(this@LoginActivity, "Senha fraca", Toast.LENGTH_SHORT).show()
-                        }
-                        is FirebaseAuthUserCollisionException -> {
-                        Toast.makeText(this@LoginActivity, "Esse usuário já existe", Toast.LENGTH_SHORT).show()
-                        }
-                        else -> {
-                            Toast.makeText(this@LoginActivity, it.localizedMessage, Toast.LENGTH_SHORT).show()
-                        }
-                    }
+                    Toast.makeText(this, it.localizedMessage, Toast.LENGTH_LONG).show()
                 }
         }
 
-        binding.btLoginSignUpAnonymous.setOnClickListener {
-            firebaseAuth.signInAnonymously()
-                .addOnSuccessListener {
-                    binding.tvLoginUserName.text = "Usuário anônimo"
-                }.addOnFailureListener {
-                    Toast.makeText(this@LoginActivity, it.localizedMessage, Toast.LENGTH_SHORT).show()
-                }
+        binding.btLoginLogout.setOnClickListener {
+            firebaseAuth.signOut()
+            initSignUp()
         }
     }
 
     override fun onResume() {
         super.onResume()
         firebaseAuth.currentUser?.let {
-            binding.tvLoginUserName.text = it.displayName
+            val documentReference = firebaseFirestore.collection(FIRESTORE_COLLECTION_USERS)
+                .document(it.uid)
+            documentReference.get()
+                .addOnSuccessListener {
+                    val user = it.toObject<UserFirestore>()
+                }.addOnFailureListener {
+                    it.localizedMessage
+                }
         } ?: run {
             // Create and launch sign-in intent
-            startActivityForResult(
-                AuthUI.getInstance()
-                    .createSignInIntentBuilder()
-                    .setAvailableProviders(providers)
-                    .build(),
-                RC_SIGN_IN)
+            initSignUp()
         }
+    }
+
+    private fun initSignUp() {
+        startActivityForResult(
+            AuthUI.getInstance()
+                .createSignInIntentBuilder()
+                .setIsSmartLockEnabled(false)
+                .setAvailableProviders(providers)
+                .build(),
+            RC_SIGN_IN
+        )
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         callbackManager.onActivityResult(requestCode, resultCode, data)
         super.onActivityResult(requestCode, resultCode, data)
-
-//        if (requestCode == RC_SIGN_IN) {
-//            val task: Task<GoogleSignInAccount> =
-//                GoogleSignIn.getSignedInAccountFromIntent(data)
-//            handleSignInResult(task)
-//        }
 
         if (requestCode == RC_SIGN_IN) {
             val response = fromResultIntent(data)
@@ -179,16 +130,8 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
-        try {
-            val account = completedTask.getResult(ApiException::class.java)
-
-            // Signed in successfully, show authenticated UI.
-            binding.signInButton.isVisible = false
-        } catch (e: ApiException) {
-            // The ApiException status code indicates the detailed failure reason.
-            // Please refer to the GoogleSignInStatusCodes class reference for more information.
-            Log.w("TAG", "signInResult:failed code=" + e.statusCode)
-        }
+    companion object {
+        private const val RC_SIGN_IN = 999
+        private const val FIRESTORE_COLLECTION_USERS = "users"
     }
 }
