@@ -9,13 +9,11 @@ import com.facebook.*
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse.*
 import com.github.cesar1287.desafiopicpayandroid.databinding.ActivityLoginBinding
-import com.github.cesar1287.desafiopicpayandroid.model.UserFirestore
 import com.google.firebase.Timestamp
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.GeoPoint
 import com.google.firebase.firestore.SetOptions
 import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
 import java.util.*
 
@@ -86,16 +84,8 @@ class LoginActivity : AppCompatActivity() {
         super.onResume()
         firebaseAuth.currentUser?.let {
             val documentReference = firebaseFirestore.collection(FIRESTORE_COLLECTION_USERS)
-                .document(it.uid)
-            documentReference.addSnapshotListener {
-                    value, error ->
-                error?.let {
-                    Toast.makeText(this, it.localizedMessage, Toast.LENGTH_LONG).show()
-                } ?: run {
-                    val user = value?.toObject<UserFirestore>()
-                    user?.email
-                }
-            }
+                .document(firebaseAuth.currentUser?.uid ?: "")
+            documentReference.delete()
         } ?: run {
             // Create and launch sign-in intent
             initSignUp()
